@@ -1,0 +1,196 @@
+{
+  "name": "@stlswing/frontend",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "serve": "pm2 --name Frontend start npm -- start",
+    "restart": "pm2 restart --name Frontend ",
+    "stop": "pm2 stop Frontend",
+    "lint": "eslint src/**/*.ts* --fix",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test:vitest": "vitest --config ./vitest.config.ts",
+    "test:vitest:coverage": "vitest --coverage",
+    "test:vitest:prod": "vitest run",
+    "test:vitest:related": "vitest related $(git diff --name-only . | grep src | sed 's/.*(src)/\\1/')",
+    "test:jest": "jest --watch",
+    "test:jest:prod": "jest",
+    "test:jest:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@testing-library/dom": "~8.11.3",
+    "@testing-library/jest-dom": "~5.16.2",
+    "@testing-library/react": "~12.1.3",
+    "@testing-library/user-event": "~13.5.0",
+    "@types/jest": "~27.4.1",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/testing-library__jest-dom": "~5.14.2",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@vitejs/plugin-react": "~1.2.0",
+    "autoprefixer": "~10.4.2",
+    "babel-jest": "~27.5.1",
+    "babel-loader": "^8.2.3",
+    "cssnano": "~5.0.17",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "~8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "~4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-unused-imports": "~2.0.0",
+    "happy-dom": "~2.41.0",
+    "jest": "~27.5.1",
+    "jest-axe": "~5.0.1",
+    "jest-watch-typeahead": "~1.0.0",
+    "postcss": "~8.4.7",
+    "postcss-import": "~14.0.2",
+    "prettier": "^2.5.1",
+    "tailwindcss": "~3.0.23",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vite-plugin-eslint": "~1.3.0",
+    "vitest": "~0.5.7",
+    "@stlswing/utils": "^1.0.0",
+    "@stlswing/interfaces": "^1.0.0",
+    "@stlswing/components": "^1.0.0"
+  },
+  "peerDependencies": {
+    "node-notifier": "~10.0.1"
+  },
+  "eslintConfig": {
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "ignorePatterns": [
+      "node_modules",
+      "dist",
+      "**/src/**/*.spec.*",
+      "**/src/**/*.test.*"
+    ],
+    "root": true,
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "plugin:react/recommended",
+      "eslint:recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "react",
+      "@typescript-eslint",
+      "prettier",
+      "unused-imports"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".ts",
+            ".tsx"
+          ]
+        }
+      ],
+      "no-unused-vars": "off",
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          "vars": "all",
+          "varsIgnorePattern": "^_",
+          "args": "after-used",
+          "argsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "jest-environment-jsdom",
+    "notify": true,
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|less)$": "identity-obj-proxy"
+    },
+    "notifyMode": "failure",
+    "clearMocks": true,
+    "transform": {
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
+    },
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/.*\\.mock\\.tsx$",
+      "/.*\\.mock\\.ts$"
+    ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-typescript",
+          [
+            "@babel/preset-react",
+            {
+              "runtime": "automatic"
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

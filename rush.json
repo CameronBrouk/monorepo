@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.47.0",
+  "pnpmVersion": "6.3.0",
+  "pnpmOptions": {
+    "strictPeerDependencies": false
+  },
+  "nodeSupportedVersionRange": ">=14.15.0 <17.0.0",
+  "approvedPackagesPolicy": {
+    "reviewCategories": ["production", "tools", "prototypes"]
+  },
+  "gitPolicy": {
+    "sampleEmail": "mrexample@users.noreply.github.com",
+    "versionBumpCommitMessage": "Applying package updates. [skip-ci]",
+    "changeLogUpdateCommitMessage": "Deleting change files and updating change logs for package updates. [skip-ci]"
+  },
+  "repository": {
+    "url": "https://github.com/CameronBrouk/monorepo-practice",
+    "defaultBranch": "master",
+    "defaultRemote": "origin"
+  },
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "projects": [
+    {
+      "packageName": "@stlswing/frontend",
+      "projectFolder": "stlswing/frontend",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "@stlswing/backend",
+      "projectFolder": "stlswing/backend",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "@stlswing/interfaces",
+      "projectFolder": "stlswing/interfaces",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "@stlswing/utils",
+      "projectFolder": "stlswing/utils",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "@stlswing/components",
+      "projectFolder": "stlswing/components",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "my-toolchain",
+      "projectFolder": "tools/my-toolchain",
+      "reviewCategory": "tools"
+    }
+  ]
+}

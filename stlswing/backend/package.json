@@ -1,0 +1,15 @@
+{
+  "name": "@stlswing/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc --watch",
+    "serve": "pm2 --name Backend start npm -- start",
+    "stop": "pm2 stop Backend"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

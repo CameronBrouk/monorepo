@@ -1,0 +1,19 @@
+{
+  "name": "@stlswing/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch",
+    "serve": "pm2 --name Utils start npm -- start",
+    "stop": "pm2 stop Utils",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "my-toolchain": "^1.0.0"
+  }
+}

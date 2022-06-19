@@ -1,0 +1,16 @@
+{
+  "name": "@stlswing/interfaces",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc --watch",
+    "serve": "pm2 --name Interfaces start npm -- start",
+    "stop": "pm2 stop Interfaces",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}
