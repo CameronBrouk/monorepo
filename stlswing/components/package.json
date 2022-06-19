@@ -24,7 +24,6 @@
     "serve:stories": "pm2 --name components:stories start npm -- run stories",
     "serve:build": "pm2 --name components:build start npm -- run build",
     "serve:test": "pm2 --name components:test start npm -- run test:vitest",
-    "serve": "npm run serve:build && npm run serve:stories && npm run serve:test",
     "stop": "pm2 stop Components",
     "lint": "eslint src/**/*.ts* --fix",
     "preview": "vite preview",
