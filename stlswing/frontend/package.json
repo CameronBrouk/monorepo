@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "vite",
-    "serve": "pm2 --name Frontend start npm -- start",
+    "serve:dev": "pm2 --name frontend:dev start npm -- start",
+    "serve:test": "pm2 --name frontend:test start npm -- run test:vitest",
+    "serve": "npm run serve:dev && npm run serve:test",
     "restart": "pm2 restart --name Frontend ",
     "stop": "pm2 stop Frontend",
     "lint": "eslint src/**/*.ts* --fix",
