@@ -2,14 +2,26 @@
   "name": "@stlswing/interfaces",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc --watch",
-    "stop": "pm2 stop Interfaces",
+    "serve": "pm2 --name interfaces start npm -- start",
+    "stop": "pm2 stop Utils",
     "build": "tsc"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "my-toolchain": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "~8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "~4.0.0",
+    "eslint-plugin-unused-imports": "~2.0.0"
+  }
 }
