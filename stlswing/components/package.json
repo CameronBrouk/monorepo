@@ -24,6 +24,7 @@
     "serve:stories": "pm2 --name components:stories start npm -- run stories",
     "serve:build": "pm2 --name components:build start npm -- run build",
     "serve:test": "pm2 --name components:test start npm -- run test:vitest",
+    "serve": "npm run serve:build && npm run serve:stories",
     "stop": "pm2 stop Components",
     "lint": "eslint src/**/*.ts* --fix",
     "preview": "vite preview",
@@ -49,7 +50,7 @@
     "@testing-library/jest-dom": "~5.16.2",
     "@testing-library/react": "~12.1.3",
     "@testing-library/user-event": "~13.5.0",
-    "@types/jest": "~27.4.1",
+    "@types/jest": "~28.1.2",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/testing-library__jest-dom": "~5.14.2",
@@ -70,9 +71,9 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-unused-imports": "~2.0.0",
     "happy-dom": "~2.41.0",
-    "jest": "~27.5.1",
-    "jest-axe": "~5.0.1",
-    "jest-watch-typeahead": "~1.0.0",
+    "jest": "~28.1.1",
+    "jest-axe": "~6.0.0",
+    "jest-watch-typeahead": "~1.1.0",
     "postcss": "~8.4.7",
     "postcss-import": "~14.0.2",
     "prettier": "^2.5.1",
@@ -89,6 +90,11 @@
     "node-notifier": "~10.0.1"
   },
   "eslintConfig": {
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaFeatures": {
