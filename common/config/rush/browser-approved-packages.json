@@ -131,6 +131,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "date-fns",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "eslint",
       "allowedCategories": [ "production" ]
     },
@@ -280,6 +284,10 @@
     },
     {
       "name": "vitest",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack",
       "allowedCategories": [ "production" ]
     },
     {
