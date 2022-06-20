@@ -1,6 +1,6 @@
 {
   "extends": "./node_modules/my-toolchain/includes/tsconfig-web.json",
   "compilerOptions": {
-    "types": []
+    "types": ["jest"]
   }
 }
