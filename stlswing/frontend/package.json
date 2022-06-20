@@ -13,10 +13,7 @@
     "test:vitest": "vitest --config ./vitest.config.ts",
     "test:vitest:coverage": "vitest --coverage",
     "test:vitest:prod": "vitest run",
-    "test:vitest:related": "vitest related $(git diff --name-only . | grep src | sed 's/.*(src)/\\1/')",
-    "test:jest": "jest --watch",
-    "test:jest:prod": "jest",
-    "test:jest:coverage": "jest --coverage"
+    "test:vitest:related": "vitest related $(git diff --name-only . | grep src | sed 's/.*(src)/\\1/')"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -55,10 +52,8 @@
     "vitest": "~0.5.7",
     "@stlswing/utils": "^1.0.0",
     "@stlswing/interfaces": "^1.0.0",
-    "@stlswing/components": "^1.0.0"
-  },
-  "peerDependencies": {
-    "node-notifier": "~10.0.1"
+    "jest-axe": "~6.0.0",
+    "my-toolchain": "^1.0.0"
   },
   "eslintConfig": {
     "settings": {
