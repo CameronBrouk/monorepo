@@ -1,9 +1,7 @@
+// @ts-nocheck
 import { OmitDefaults, TableDefaults } from '@stlswing/interfaces'
 import { prisma, TableNames } from '../index'
-import {
-  getPrismaQueryParamFilters,
-  omitDefaults
-} from './crud.helpers'
+import { getPrismaQueryParamFilters, omitDefaults } from './crud.helpers'
 import { omit, range, update } from 'lodash/fp'
 import { handlePrismaErrors } from '../errors/errors'
 import { Request } from 'express'
@@ -48,7 +46,6 @@ export const getPrismaCrud = <T extends TableDefaults>(
 
   /** * Create a new row in the table */
   const createOne = async (data: OmitDefaults<T>) =>
-    // @ts-ignore
     prisma[tableName].create({ data }).catch(handlePrismaErrors)
 
   /** * Modify one or more columns on an existing table row */
@@ -66,7 +63,6 @@ export const getPrismaCrud = <T extends TableDefaults>(
 
   /** * Modify a record's data and use the result to create a new item in the DB */
   const duplicateOne = async (id: number, changes?: Partial<OmitDefaults<T>>) =>
-    // @ts-ignore
     getOne(Number(id))
       .then((data) => {
         const prevItem = omit(['id'], omitDefaults(data))
