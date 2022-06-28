@@ -1,6 +1,21 @@
 {
   "extends": "./node_modules/my-toolchain/includes/tsconfig-web.json",
   "compilerOptions": {
-    "types": ["jest"]
+    "types": ["jest"],
+    "lib": [
+      "es5",
+      "scripthost",
+      "dom",
+      "es2015.collection",
+      "es2015.promise",
+      "es2015.iterable",
+      "es2019",
+      "es2020.bigint",
+      "es2020.string",
+      "es2020.symbol.wellknown"
+    ],
+    "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2019"
   }
 }

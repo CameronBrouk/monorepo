@@ -13108,7 +13108,7 @@ packages:
     dev: false
 
   file:projects/components.tgz_7595cd2ccc6eb73928f4b431a601ae97:
-    resolution: {integrity: sha512-xt2N4Yyc7msKchOM7JOexoaVsj2Ijhcfms6ahafkvBP7Xnz9SfzEqkeCFogm0x1Rr4aBqVmq0joMp4Gn67Kfsg==, tarball: file:projects/components.tgz}
+    resolution: {integrity: sha512-nTm0BYmNv9BFjYIo5cJTcS84qSwoMVHvU//uDQmLU6Vg+muiEMYeO+pL8VOVwvcnBxt8SoB3a6ISryUTxI7g5Q==, tarball: file:projects/components.tgz}
     id: file:projects/components.tgz
     name: '@rush-temp/components'
     version: 0.0.0
@@ -13123,6 +13123,7 @@ packages:
       '@testing-library/react': 12.1.3_react-dom@17.0.2+react@17.0.2
       '@testing-library/user-event': 13.5.0_@testing-library+dom@8.11.3
       '@types/jest': 28.1.2
+      '@types/ramda': 0.28.14
       '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
       '@types/testing-library__jest-dom': 5.14.2
@@ -13150,6 +13151,7 @@ packages:
       postcss: 8.4.14
       postcss-import: 14.0.2_postcss@8.4.14
       prettier: 2.5.1
+      ramda: 0.28.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       tailwindcss: 3.0.23_b528cca333874ef82c296254663a184f
