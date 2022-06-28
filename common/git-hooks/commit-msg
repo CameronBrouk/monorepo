@@ -86,8 +86,8 @@ echoImportant "Checking if Commit begins with action word."
 
 export MESSAGE=$(<$1)
 
-if [[  ! $MESSAGE =~ ^(Add|Remove|Fix|Deprecate|Enhance|Begin|Test|Improve|Update|Temp|Continue).* ]]; then
-  echoFail "Commit Must Begin with an action word: Add|Remove|Fix|Deprecate|Enhance|Begin|Test|Improve|Update|Continue|TEMP"
+if [[  ! $MESSAGE =~ ^(Add|Remove|Fix|Deprecate|Enhance|Begin|Test|Improve|Update|Temp|Continue|Move|Complete|Delete|Rename).* ]]; then
+  echoFail "Commit Must Begin with an action word: Add|Remove|Fix|Deprecate|Enhance|Begin|Test|Improve|Update|Continue|Move|Complete|Delete|Rename|TEMP"
   echo -e "${red}Aborting....${cf}"
   exit 1
 else
