@@ -18,8 +18,8 @@
     "test:vitest:related": "vitest related $(git diff --name-only . | grep src | sed 's/.*(src)/\\1/')"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
     "@stlswing/utils": "^1.0.0",
     "@stlswing/interfaces": "^1.0.0",
     "@stlswing/components": "^1.0.0"
@@ -27,10 +27,10 @@
   "devDependencies": {
     "@testing-library/dom": "~8.11.3",
     "@testing-library/jest-dom": "~5.16.2",
-    "@testing-library/react": "~12.1.3",
+    "@testing-library/react": "~13.3.0",
     "@testing-library/user-event": "~13.5.0",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@types/react": "~18.0.14",
+    "@types/react-dom": "~18.0.5",
     "@types/testing-library__jest-dom": "~5.14.2",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
