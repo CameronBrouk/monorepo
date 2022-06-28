@@ -8,11 +8,12 @@ export default defineConfig({
     eslint({
       fix: true,
       cache: true,
-      throwOnError: true,
+      throwOnError: true
     }),
+    // @ts-ignore
     react({
       include: ['**/*.{tsx|ts}'],
-      fastRefresh: process.env.NODE_ENV !== 'test',
-    }),
-  ],
+      fastRefresh: process.env.NODE_ENV !== 'test'
+    })
+  ]
 })

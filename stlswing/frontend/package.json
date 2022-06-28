@@ -19,7 +19,10 @@
   },
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "@stlswing/utils": "^1.0.0",
+    "@stlswing/interfaces": "^1.0.0",
+    "@stlswing/components": "^1.0.0"
   },
   "devDependencies": {
     "@testing-library/dom": "~8.11.3",
@@ -52,68 +55,7 @@
     "vite": "^2.8.0",
     "vite-plugin-eslint": "~1.3.0",
     "vitest": "~0.5.7",
-    "@stlswing/utils": "^1.0.0",
-    "@stlswing/interfaces": "^1.0.0",
     "jest-axe": "~6.0.0",
     "my-toolchain": "^1.0.0"
-  },
-  "eslintConfig": {
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "ignorePatterns": [
-      "node_modules",
-      "dist",
-      "**/src/**/*.spec.*",
-      "**/src/**/*.test.*"
-    ],
-    "root": true,
-    "env": {
-      "browser": true,
-      "es2021": true
-    },
-    "extends": [
-      "plugin:react/recommended",
-      "eslint:recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-    },
-    "plugins": [
-      "react",
-      "@typescript-eslint",
-      "prettier",
-      "unused-imports"
-    ],
-    "rules": {
-      "react/react-in-jsx-scope": "off",
-      "react/jsx-filename-extension": [
-        1,
-        {
-          "extensions": [
-            ".ts",
-            ".tsx"
-          ]
-        }
-      ],
-      "no-unused-vars": "off",
-      "unused-imports/no-unused-imports": "error",
-      "unused-imports/no-unused-vars": [
-        "warn",
-        {
-          "vars": "all",
-          "varsIgnorePattern": "^_",
-          "args": "after-used",
-          "argsIgnorePattern": "^_"
-        }
-      ]
-    }
   }
 }
