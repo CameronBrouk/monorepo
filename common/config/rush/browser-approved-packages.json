@@ -263,6 +263,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "konva",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "lint-staged",
       "allowedCategories": [ "production" ]
     },
@@ -324,6 +328,14 @@
     },
     {
       "name": "react-dom",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "react-konva",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "react-spring",
       "allowedCategories": [ "production" ]
     },
     {
