@@ -1,0 +1,5 @@
+{
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "npm.packageManager": "pnpm",
+  "outline.showPackages": true
+}
