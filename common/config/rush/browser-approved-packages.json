@@ -31,7 +31,15 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@prisma/client",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@stlswing/components",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@stlswing/frontend",
       "allowedCategories": [ "production" ]
     },
     {
@@ -83,7 +91,19 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@types/body-parser",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@types/express",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@types/jest",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@types/lodash",
       "allowedCategories": [ "production" ]
     },
     {
@@ -127,6 +147,26 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "body-parser",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "chalk",
+      "allowedCategories": [ "production", "tools" ]
+    },
+    {
+      "name": "change-case",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "command-line-args",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "concurrently",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "cssnano",
       "allowedCategories": [ "production" ]
     },
@@ -136,19 +176,19 @@
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-config-airbnb",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-config-prettier",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-plugin-import",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-plugin-jsx-a11y",
@@ -156,7 +196,7 @@
     },
     {
       "name": "eslint-plugin-prettier",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-plugin-react",
@@ -172,6 +212,22 @@
     },
     {
       "name": "eslint-plugin-unused-imports",
+      "allowedCategories": [ "production", "tools" ]
+    },
+    {
+      "name": "express",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "express-error-handler",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "express-handler-errors",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "faker",
       "allowedCategories": [ "production" ]
     },
     {
@@ -199,6 +255,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "jose",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "jsdom",
       "allowedCategories": [ "production" ]
     },
@@ -207,11 +267,23 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "lodash",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "mockdate",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "my-controls",
       "allowedCategories": [ "production" ]
     },
     {
       "name": "node-notifier",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "nodemon",
       "allowedCategories": [ "production" ]
     },
     {
@@ -235,6 +307,14 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "prisma",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "prompt",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "ramda",
       "allowedCategories": [ "production" ]
     },
@@ -251,6 +331,14 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "rxjs",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "shelljs",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "storybook-builder-vite",
       "allowedCategories": [ "production" ]
     },
@@ -263,11 +351,23 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "ts-node",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "ts-node-dev",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "unplugin-auto-import",
       "allowedCategories": [ "production" ]
     },
     {
       "name": "vite",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "vite-dts",
       "allowedCategories": [ "production" ]
     },
     {
@@ -283,6 +383,14 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "vite-plugin-tailwind",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "vite-plugin-windicss",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "vitest",
       "allowedCategories": [ "production" ]
     },
@@ -292,6 +400,10 @@
     },
     {
       "name": "whatwg-fetch",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "zod",
       "allowedCategories": [ "production" ]
     }
   ]
