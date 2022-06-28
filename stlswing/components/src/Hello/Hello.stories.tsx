@@ -1,22 +1,21 @@
 import { Story } from '@ladle/react'
-import { HelloProps } from './Hello.types'
-import { Hello } from './Hello'
+import { Hello as HelloComponent, HelloProps } from './Hello'
 
-export const HelloStory: Story<HelloProps> = (props) => <Hello {...props} />
+export const Hello: Story<HelloProps> = (props) => <HelloComponent {...props} />
 
-// HelloStory.args = {
-//   a: 'string',
-//   b: 0
-// }
+Hello.args = {
+  a: 'string',
+  b: 0
+}
 
-// HelloStory.argTypes = {
-//   variant: {
-//     control: { type: 'radio' },
-//     options: ['primary', 'secondary'],
-//     defaultValue: 'primary'
-//   },
-//   size: {
-//     control: { type: 'select' },
-//     options: ['small', 'medium', 'big', 'huuuuge']
-//   }
-// }
+Hello.argTypes = {
+  variant: {
+    control: { type: 'radio' },
+    options: ['primary', 'secondary'],
+    defaultValue: 'primary'
+  },
+  size: {
+    control: { type: 'select' },
+    options: ['small', 'medium', 'big', 'huuuuge']
+  }
+}

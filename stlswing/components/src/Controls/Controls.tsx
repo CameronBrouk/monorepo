@@ -9,7 +9,7 @@ export const Controls = ({
   size
 }: ControlsProps) => (
   <>
-    <p>Count: {count}</p>
+    <p>shit: {count}</p>
     <p>Disabled: {disabled ? 'yes' : 'no'}</p>
     <p>Label: {label}</p>
     <p>Colors: {colors.join(',')}</p>

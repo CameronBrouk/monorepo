@@ -4,7 +4,7 @@ export function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='max-w-full w-screen h-screen max-h-screen bg-gray-200 text-red-800 flex justify-center items-center text-xl'>
+    <div className='max-w-full w-full h-screen max-h-screen bg-gray-200 text-red-800 flex justify-center items-center text-xl'>
       <header>
         <span className='flex space-x-4'>
           <button onClick={() => setCount((count) => count + 1)}>count</button>

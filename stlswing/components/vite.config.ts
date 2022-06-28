@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+// import { peerDependencies, devDependencies } from './package.json'
 import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
 import * as path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     eslint({
@@ -12,38 +11,37 @@ export default defineConfig({
       cache: true,
       throwOnError: true
     }),
+    // @ts-ignore
     react({
       include: ['**/*.{tsx|ts}'],
-      fastRefresh: process.env.NODE_ENV !== 'test'
-    }),
-    dts({
-      // include: ['src/index.tsx'],
-      // beforeWriteFile: (filePath, content) => ({
-      //   filePath: filePath.replace('/lib', ''),
-      //   content
-      // })
+      exclude: ['./dist', './node_modules']
     })
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
+      '@': 'src'
     }
   },
   build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'components',
-      fileName: (format) => `components.${format}.js`
+    watch: {
+      exclude: ['dist', 'node_modules']
     },
-    target: 'esnext',
-    sourcemap: true,
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
-        }
+    lib: {
+      entry: 'src/index.ts',
+      name: 'index',
+      formats: ['es'],
+      fileName: (format) => `index.${format}.js`
+    }
+  },
+  rollupOptions: {
+    external: [
+      // ...Object.keys(peerDependencies),
+      // ...Object.keys(devDependencies)
+    ],
+    output: {
+      globals: {
+        react: 'React',
+        'react-dom': 'ReactDOM'
       }
     }
   }

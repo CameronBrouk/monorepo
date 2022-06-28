@@ -3,28 +3,30 @@
   "private": true,
   "version": "1.0.0",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
-  "main": "./dist/components.es.js",
-  "module": "./dist/components.umd.js",
-  "typings": "./dist/index.d.ts",
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.js",
+  "typings": "types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/components.es.js",
-      "require": "./dist/components.umd.js"
-    },
-    "./dist/style.css": "./dist/style.css"
+      "import": "./dist/index.es.js"
+    }
   },
   "scripts": {
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "stories": "ladle serve",
-    "types": "tsc",
+    "types": "tsc --watch",
+    "tailwind": "npx tailwindcss -i src/tailwind.css -o dist/output.css --watch",
+    "build:dev": "vite build",
     "serve:types": "pm2 --name components:types start npm -- run types",
     "serve:stories": "pm2 --name components:stories start npm -- run stories",
-    "serve:build": "pm2 --name components:build start npm -- run build",
+    "serve:css": "pm2 --name components:css start npm -- run tailwind",
+    "serve:build": "pm2 --name components:build start npm -- run build:dev",
     "serve:test": "pm2 --name components:test start npm -- run test:vitest",
-    "serve": "npm run serve:build && npm run serve:stories",
+    "serve": "npm run serve:build && npm run serve:stories && npm run serve:types",
     "stop": "pm2 stop Components",
     "lint": "eslint src/**/*.ts* --fix",
     "preview": "vite preview",
@@ -84,7 +86,9 @@
     "vitest": "~0.5.7",
     "my-toolchain": "^1.0.0",
     "@stlswing/interfaces": "^1.0.0",
-    "vite-plugin-dts": "~1.2.0"
+    "vite-plugin-dts": "~1.2.0",
+    "vite-dts": "~1.0.4",
+    "vite-plugin-windicss": "~1.8.5"
   },
   "peerDependencies": {
     "node-notifier": "~10.0.1"
