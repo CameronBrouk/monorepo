@@ -1,7 +1,6 @@
 import { makeCrudEndpoints } from './crud/crud'
 import { PrismaClient } from '@prisma/client'
 import express from 'express'
-import bodyParser from 'body-parser'
 import { userPayload } from './tables/User/User'
 
 export type TableNames = 'todo' | 'todoList' | 'person' | 'user' | 'permission'
@@ -19,7 +18,7 @@ export const prisma = new PrismaClient({
 const app = express()
 
 // Express Server Config
-app.use(bodyParser.json())
+app.use(express.json())
 
 // API Endpoints
 makeCrudEndpoints('todo', app)

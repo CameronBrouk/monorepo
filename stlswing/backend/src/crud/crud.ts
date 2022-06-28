@@ -1,6 +1,5 @@
 import { OmitDefaults, TableDefaults } from '@stlswing/interfaces'
 import { Express, Request, Response } from 'express'
-// import { filter, fromPairs, map, pipe } from 'lodash/fp'
 import { PermissionsMap } from 'permissions/permissions'
 import { flatten, fromPairs } from 'ramda'
 import { z, ZodObject } from 'zod'
@@ -182,6 +181,7 @@ export const makeCrudEndpoints = <
     await updateMany(req.body).catch(handleError(res))
 
     await query({
+      // @ts-ignore
       where: {
         id: {
           in: req.body.ids
