@@ -8,7 +8,7 @@
     "serve:test": "pm2 --name frontend:test start npm -- run test",
     "serve": "npm run serve:dev",
     "restart": "pm2 restart --name Frontend ",
-    "stop": "pm2 delete frontend:dev && pm2 delete frontend:test",
+    "stop": "pm2 delete frontend:dev",
     "lint": "eslint src/**/*.ts* --fix",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -20,7 +20,7 @@
   "dependencies": {
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
-    "@stlswing/utils": "^1.0.0",
+    "@stlswing/utils": "~1.0.0",
     "@stlswing/interfaces": "^1.0.0",
     "@stlswing/components": "^1.0.0"
   },
