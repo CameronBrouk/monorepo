@@ -1,14 +1,10 @@
-import { Hello } from '@stlswing/components'
 import { useState } from 'react'
-import '../node_modules/@stlswing/components/dist/style.css'
 
 export function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='max-w-full space-x-4 w-screen h-screen max-h-screen bg-gray-200 text-red-800 flex justify-center items-center text-xl'>
-      <Hello a={'test'} />
-      Hell
+    <div className='max-w-full relative space-x-4 w-screen h-screen max-h-screen bg-white text-red-800 flex flex-col justify-center items-center text-xl'>
       <div className='p-4 border bg-blue-200'>
         test test test test test test test test test test test
       </div>
