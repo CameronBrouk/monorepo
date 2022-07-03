@@ -23,13 +23,13 @@
     "rxjs": "~7.5.5",
     "@prisma/client": "~3.15.2",
     "@types/lodash": "~4.14.182",
-    "@stlswing/utils": "^1.0.0",
+    "@stlswing/utils": "~1.0.0",
     "zod": "~3.17.3",
     "jose": "~4.8.1"
   },
   "devDependencies": {
     "@stlswing/interfaces": "^1.0.0",
-    "@stlswing/utils": "^1.0.0",
+    "@stlswing/utils": "~1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",
