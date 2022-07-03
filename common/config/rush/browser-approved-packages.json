@@ -19,6 +19,22 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@faker-js/faker",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@fortawesome/fontawesome-svg-core",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@fortawesome/free-solid-svg-icons",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@fortawesome/react-fontawesome",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@ladle/react",
       "allowedCategories": [ "production" ]
     },
@@ -32,6 +48,10 @@
     },
     {
       "name": "@prisma/client",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@react-spring/web",
       "allowedCategories": [ "production" ]
     },
     {
@@ -159,6 +179,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "chrono-node",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "command-line-args",
       "allowedCategories": [ "tools" ]
     },
@@ -231,6 +255,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "framer-motion",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "happy-dom",
       "allowedCategories": [ "production" ]
     },
@@ -291,6 +319,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "observable-hooks",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "postcss",
       "allowedCategories": [ "production" ]
     },
@@ -331,11 +363,31 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "react-hook-form",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "react-intersection-observer",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "react-konva",
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "react-router",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "react-router-dom",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "react-spring",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "react-use-measure",
       "allowedCategories": [ "production" ]
     },
     {
