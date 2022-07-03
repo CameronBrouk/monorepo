@@ -1,5 +1,3 @@
-import { Prisma } from '@prisma/client'
-
 export type TableDefaults = {
   id: string
   draft?: boolean
@@ -11,13 +9,17 @@ export type TableDefaults = {
 }
 
 type GetFilter<T> = T extends string
-  ? Prisma.StringFilter
+  ? // ? Prisma.StringFilter
+    any
   : T extends boolean
-  ? Prisma.BoolFilter
+  ? // ? Prisma.BoolFilter
+    any
   : T extends Date
-  ? Prisma.DateTimeFilter
+  ? // ? Prisma.DateTimeFilter
+    any
   : T extends number
-  ? Prisma.IntFilter
+  ? // ? Prisma.IntFilter
+    any
   : never
 
 export type WhereFilters<T extends Record<string, any>> = {
