@@ -4,7 +4,7 @@ export type HelloProps = {
 }
 
 export const Hello = (props: HelloProps) => (
-  <p className='text-2xl bg-green-800 text-red-500'>{props?.a || 'fuck'}</p>
+  <p className='text-2xl  text-red-500'>{props?.a || 'fuck'}</p>
 )
 
 export const HelloFuck = (props: HelloProps) => (

@@ -3,6 +3,8 @@
   "compilerOptions": {
     "types": ["vite/client", "vitest", "react"],
     "outDir": "./types",
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "allowUmdGlobalAccess": true,
     "emitDeclarationOnly": true,

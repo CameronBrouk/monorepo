@@ -6,11 +6,11 @@ import * as path from 'path'
 
 export default defineConfig({
   plugins: [
-    eslint({
-      fix: true,
-      cache: true,
-      throwOnError: true
-    }),
+    // eslint({
+    //   fix: true,
+    //   cache: true,
+    //   throwOnError: true
+    // }),
     // @ts-ignore
     react({
       include: ['**/*.{tsx|ts}'],
@@ -31,18 +31,6 @@ export default defineConfig({
       name: 'index',
       formats: ['es'],
       fileName: (format) => `index.${format}.js`
-    }
-  },
-  rollupOptions: {
-    external: [
-      // ...Object.keys(peerDependencies),
-      // ...Object.keys(devDependencies)
-    ],
-    output: {
-      globals: {
-        react: 'React',
-        'react-dom': 'ReactDOM'
-      }
     }
   }
 })

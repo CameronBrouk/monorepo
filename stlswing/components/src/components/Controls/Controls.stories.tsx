@@ -2,9 +2,7 @@ import type { Story } from '@ladle/react'
 import { ControlsProps } from './Controls.types'
 import { Controls } from './Controls'
 
-export const ControlsStory: Story<ControlsProps> = (props) => (
-  <Controls {...props} />
-)
+const ControlsStory: Story<ControlsProps> = (props) => <Controls {...props} />
 
 ControlsStory.args = {
   label: 'Hello world',

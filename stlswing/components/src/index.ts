@@ -1,4 +1,4 @@
 export * from './App'
+export * from './components'
 export * from './index.css'
-export * from './Hello/Hello'
-export * from './Controls/Controls'
+export * from './components/Controls/Controls'

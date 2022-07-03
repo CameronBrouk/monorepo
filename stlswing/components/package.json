@@ -36,7 +36,22 @@
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
     "@ladle/react": "~1.1.1",
-    "ramda": "~0.28.0"
+    "ramda": "~0.28.0",
+    "@react-spring/web": "~9.4.5",
+    "react-hook-form": "~7.33.0",
+    "@faker-js/faker": "~7.3.0",
+    "rxjs": "~7.5.5",
+    "@fortawesome/fontawesome-svg-core": "~6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "react-router": "~6.3.0",
+    "react-router-dom": "~6.3.0",
+    "observable-hooks": "~4.2.0",
+    "change-case": "~4.1.2",
+    "react-use-measure": "~2.1.1",
+    "date-fns": "~2.28.0",
+    "chrono-node": "~2.3.8",
+    "react-intersection-observer": "~9.3.5"
   },
   "devDependencies": {
     "@testing-library/dom": "~8.11.3",
@@ -73,7 +88,8 @@
     "vitest": "~0.5.7",
     "my-toolchain": "^1.0.0",
     "@stlswing/interfaces": "^1.0.0",
-    "@types/ramda": "~0.28.14"
+    "@types/ramda": "~0.28.14",
+    "@stlswing/utils": "~1.0.0"
   },
   "peerDependencies": {
     "node-notifier": "~10.0.1"
