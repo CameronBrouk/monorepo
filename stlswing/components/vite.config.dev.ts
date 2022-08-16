@@ -6,12 +6,11 @@ import * as path from 'path'
 
 export default defineConfig({
   plugins: [
-    // eslint({
-    //   fix: true,
-    //   cache: true,
-    //   throwOnError: true
-    // }),
-    // @ts-ignore
+    eslint({
+      fix: true,
+      cache: true,
+      throwOnError: true
+    }),
     react({
       include: ['**/*.{tsx|ts}'],
       exclude: ['./dist', './node_modules']

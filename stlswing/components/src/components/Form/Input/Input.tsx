@@ -1,7 +1,7 @@
 import { useObservableCallback } from 'observable-hooks'
 import { pick } from 'ramda'
 import { InputError } from './InputError'
-import { InputProps } from './types'
+import { InputProps } from './input.types'
 import { tap } from 'rxjs'
 
 /**
@@ -54,19 +54,19 @@ export const Input = ({
 
   return (
     <div className={`mt-6 ${props.className}`}>
-      {!props.hideLabel && (
-        <label
-          className={`text-sm font-medium leading-5 text-gray-700 lock ${props.labelClasses}`}
-          htmlFor={label}
-        >
-          <span className='pl-2 m-0 text-gray-500 text-md'>
-            <span className='pr-1 text-red-400'>
-              {validators.required && '*'}
-            </span>
-            {label}
+      <label
+        className={`text-sm font-medium leading-5 text-gray-700 lock ${
+          props.labelClasses
+        } ${props.noLabel ? 'sr-only' : ''}`}
+        htmlFor={label}
+      >
+        <span className='pl-2 m-0 text-gray-500 text-md'>
+          <span className='pr-1 text-red-400'>
+            {validators.required && '*'}
           </span>
-        </label>
-      )}
+          {label}
+        </span>
+      </label>
 
       <div
         className={`rounded-lg group shadow-sm flex border border-gray-300 bg-white focus-within:shadow-outline-blue focus-within:border-blue-300 overflow-hidden ${props.inputClasses}`}

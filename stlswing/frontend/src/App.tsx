@@ -1,3 +1,5 @@
+import React from 'react'
+import { Divider } from '@stlswing/components'
 import { useState } from 'react'
 
 export function App() {
@@ -8,6 +10,8 @@ export function App() {
       <div className='p-4 border bg-blue-200'>
         test test test test test test test test test test test
       </div>
+      <Divider text='Test' />
+
       <header className='bg-pink-200 p-4'>
         <span className='flex space-x-4'>
           <button onClick={() => setCount((count) => count + 1)}>count</button>

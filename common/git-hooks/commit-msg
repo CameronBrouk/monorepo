@@ -94,13 +94,3 @@ else
   echo -e "Success"
   echoSuccess "committing message: ${MESSAGE}"
 fi
-
-# export JIRA_ISSUE_TAG='TDETS-[0-9]+'
-
-# if [[ $MESSAGE =~ $JIRA_ISSUE_TAG ]]; then
-#   echo -e "\e[32m--- Success. Your commit message is formatted correctly ---\e[0m";
-#   exit 0;
-# fi
-
-# echo -e "\e[31m***Oops!*** You forgot to add a JIRA issue number! eg. TDETS-1234 : <Title of Issue etc.>\e[0m";
-# exit 1;

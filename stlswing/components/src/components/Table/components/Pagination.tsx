@@ -74,6 +74,7 @@ export const Pagination = ({ items, perPage = 10, usePagination }: Props) => {
               <>
                 {typeof number === 'number' ? (
                   <button
+                    key={'pagination-' + number}
                     onClick={() => setCurrentPage(number)}
                     className={`z-10 relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
                       number === currentPage &&
@@ -83,7 +84,10 @@ export const Pagination = ({ items, perPage = 10, usePagination }: Props) => {
                     {number}
                   </button>
                 ) : (
-                  <span className='relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300'>
+                  <span
+                    key={'pagination-' + number}
+                    className='relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300'
+                  >
                     ...
                   </span>
                 )}

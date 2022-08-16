@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 
 export interface BurgerProps {

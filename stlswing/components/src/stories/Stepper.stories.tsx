@@ -1,3 +1,4 @@
+import React from 'react'
 import { Story } from '@ladle/react'
 import * as S from '../components/Stepper/index'
 

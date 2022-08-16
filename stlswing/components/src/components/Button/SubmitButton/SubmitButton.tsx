@@ -1,33 +1,19 @@
-import { ButtonProps, Button } from '../Button/Button'
-import React, { useState } from 'react'
+import { useObservableCallback, useSubscription } from 'observable-hooks'
+import { useState } from 'react'
+import { auditTime, tap } from 'rxjs'
 import { Loading } from '../../Loaders/Loading'
-import {
-  useObservableCallback,
-  useObservableState,
-  useSubscription,
-  pluckFirst,
-  useObservable
-} from 'observable-hooks'
-import {
-  audit,
-  auditTime,
-  from,
-  map,
-  skip,
-  skipUntil,
-  skipWhile,
-  switchMap,
-  tap,
-  throttleTime,
-  withLatestFrom
-} from 'rxjs'
+import { ButtonProps } from '../Button/Button'
 
-type Props = {
+export type SubmitButtonProps = {
   isSubmitting?: boolean
   onClick?: () => Promise<void>
 } & Omit<ButtonProps, 'onClick'>
 
-export const SubmitButton = ({ isSubmitting, children, ...props }: Props) => {
+export const SubmitButton = ({
+  isSubmitting,
+  children,
+  ...props
+}: SubmitButtonProps) => {
   const [loading, setLoading] = useState(false)
 
   const [handleClick, clicks$] = useObservableCallback((cilck$) =>

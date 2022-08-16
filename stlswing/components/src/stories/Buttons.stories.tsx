@@ -1,32 +1,22 @@
+import React from 'react'
 import { Story } from '@ladle/react'
-import '../../index.css'
 import { wait } from '@stlswing/utils'
 import { useState } from 'react'
-import {
-  Burger as BurgerComponent,
-  BurgerProps
-} from '../components/Button/Burger/Burger'
-import * as B from '../components/Button/Button/Button'
-import { SubmitButton as SubmitButtonComponent } from '../components/Button/SubmitButton/SubmitButton'
-import { ConfirmationButton as ConfirmationButtonComponent } from '../components/Button/ConfirmationButton/ConfirmationButton'
+import * as C from '../components'
 import { inc } from 'ramda'
 
-export const Burger: Story<BurgerProps> = (props) => (
-  <BurgerComponent {...props} />
-)
+export const Burger: Story<C.BurgerProps> = (props) => {
+  return <C.Burger {...props} onClick={() => {}} />
+}
 
 Burger.args = {
   dark: true,
   isOpen: true
 }
 
-export const Button: Story<B.ButtonProps> = (props) => (
-  <B.Button {...props}>Text</B.Button>
+export const Button: Story<C.ButtonProps> = (props) => (
+  <C.Button {...props}>Text</C.Button>
 )
-
-Button.args = {
-  children: 'Text'
-}
 
 Button.argTypes = {
   variant: {
@@ -48,7 +38,7 @@ Button.argTypes = {
   }
 }
 
-export const SubmitButton: Story<B.ButtonProps> = (props) => {
+export const SubmitButton: Story<C.SubmitButtonProps> = (props) => {
   const [counter, setCounter] = useState(0)
   const [submitting, setState] = useState(false)
   const asyncSubmit = async () => {
@@ -59,9 +49,13 @@ export const SubmitButton: Story<B.ButtonProps> = (props) => {
   }
   return (
     <>
-      <SubmitButtonComponent onClick={asyncSubmit} isSubmitting={submitting}>
+      <C.SubmitButton
+        onClick={asyncSubmit}
+        isSubmitting={submitting}
+        {...props}
+      >
         Submit
-      </SubmitButtonComponent>
+      </C.SubmitButton>
       <p>
         Click the button to run an async function that increments counter after
         1 second
@@ -71,26 +65,24 @@ export const SubmitButton: Story<B.ButtonProps> = (props) => {
   )
 }
 
-SubmitButton.args = {}
-SubmitButton.argTypes = {
-  type: {
-    options: ['christmas', 'raised', 'nav', 'nav-link', 'christmas'],
-    control: { type: 'select' }
-  }
-}
+// SubmitButton.args = {}
+// SubmitButton.argTypes = {
+//   type: {
+//     options: ['christmas', 'raised', 'nav', 'nav-link', 'christmas'],
+//     control: { type: 'select' }
+//   }
+// }
 
-export const ConfirmationButton: Story<B.ButtonProps> = (props) => {
+export const ConfirmationButton: Story = (props) => {
   const [counter, setCounter] = useState(0)
 
   return (
     <div>
-      <ConfirmationButtonComponent onClick={() => setCounter(inc)}>
+      <C.ConfirmationButton onClick={() => setCounter(inc)}>
         Submit
-      </ConfirmationButtonComponent>
+      </C.ConfirmationButton>
       <p>Must click twice to add to counter</p>
       <p>counter: {counter}</p>
     </div>
   )
 }
-
-Button.args = {}

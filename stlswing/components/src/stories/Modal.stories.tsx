@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Story } from '@ladle/react'
 import { Modal as ModalComponent, ModalProps } from '../components/Modal/Modal'
 import { Button } from '../components/Button/Button/Button'

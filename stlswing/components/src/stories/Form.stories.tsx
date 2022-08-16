@@ -1,17 +1,19 @@
 import { Story } from '@ladle/react'
-import { Input } from './Input/Input'
-import { useForm } from 'react-hook-form'
-import { InputProps } from './Input/types'
-import { Textarea } from './Textarea/Textarea'
-import { Radio } from './Radio/Radio'
 import { useState } from 'react'
-import { Divider } from '../Dividers/Divider'
-import { ObjectDisplay } from '../Text/ObjectDisplay'
-import { Button, SubmitButton } from '../Button'
-import { Option, Select } from './Select'
-import { Slider } from './Slider'
-import { useWindowSize } from '../../hooks'
+import { useForm } from 'react-hook-form'
+import {
+  Input,
+  Textarea,
+  Radio,
+  Divider,
+  ObjectDisplay,
+  SubmitButton,
+  Select,
+  Option,
+  Slider
+} from '../components'
 
+import React from 'react'
 export const Usage: Story<any> = (props) => {
   const [submissionValues, setSubmissionValues] = useState({})
   const form = useForm()

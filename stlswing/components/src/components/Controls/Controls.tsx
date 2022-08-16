@@ -12,7 +12,7 @@ export const Controls = ({
     <p>shit: {count}</p>
     <p>Disabled: {disabled ? 'yes' : 'no'}</p>
     <p>Label: {label}</p>
-    <p>Colors: {colors.join(',')}</p>
+    <p>Colors: {colors?.join(',')}</p>
     <p>Variant: {variant}</p>
     <p>Size: {size}</p>
   </>

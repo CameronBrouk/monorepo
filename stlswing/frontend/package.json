@@ -22,7 +22,23 @@
     "react-dom": "~18.2.0",
     "@stlswing/utils": "~1.0.0",
     "@stlswing/interfaces": "^1.0.0",
-    "@stlswing/components": "^1.0.0"
+    "@stlswing/components": "^1.0.0",
+    "ramda": "~0.28.0",
+    "@react-spring/web": "~9.4.5",
+    "rxjs": "~7.5.5",
+    "@fortawesome/fontawesome-svg-core": "~6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "observable-hooks": "~4.2.0",
+    "change-case": "~4.1.2",
+    "react-use-measure": "~2.1.1",
+    "date-fns": "~2.28.0",
+    "chrono-node": "~2.3.8",
+    "react-intersection-observer": "~9.3.5",
+    "react-hook-form": "~7.33.0",
+    "node-notifier": "~10.0.1",
+    "react-router": "~6.3.0",
+    "react-router-dom": "~6.3.0"
   },
   "devDependencies": {
     "@testing-library/dom": "~8.11.3",
@@ -56,6 +72,8 @@
     "vite-plugin-eslint": "~1.3.0",
     "vitest": "~0.5.7",
     "jest-axe": "~6.0.0",
-    "my-toolchain": "^1.0.0"
-  }
+    "my-toolchain": "^1.0.0",
+    "source-map-explorer": "~2.5.2"
+  },
+  "sideEffects": false
 }

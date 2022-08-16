@@ -1,18 +1,20 @@
 import { defineConfig } from 'vite'
+import { splitVendorChunkPlugin } from 'vite'
+import dts from 'vite-plugin-dts'
 import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
 
 export default defineConfig({
   plugins: [
-    // eslint({
-    //   fix: true,
-    //   cache: true,
-    //   throwOnError: true
-    // }),
-    // @ts-ignore
+    eslint({
+      fix: true,
+      cache: true,
+      throwOnError: true
+    }),
     react({
       include: ['**/*.{tsx|ts}'],
-      exclude: ['./dist', './node_modules']
+      exclude: ['./dist', './node_modules'],
+      jsxRuntime: 'classic'
     })
   ],
   resolve: {
@@ -21,6 +23,9 @@ export default defineConfig({
     }
   },
   build: {
+    reportCompressedSize: true,
+    minify: false,
+    sourcemap: true,
     lib: {
       entry: 'src/index.ts',
       name: 'index',
@@ -28,16 +33,4 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`
     }
   }
-  // rollupOptions: {
-  //   external: [
-  //     // ...Object.keys(peerDependencies),
-  //     // ...Object.keys(devDependencies)
-  //   ],
-  //   output: {
-  //     globals: {
-  //       react: 'React',
-  //       'react-dom': 'ReactDOM'
-  //     }
-  //   }
-  // }
 })

@@ -1,4 +1,5 @@
 import React from 'react'
+
 export type DividerProps = {
   textPosition?: 'left' | 'center' | 'right' | 'between'
   text?: string

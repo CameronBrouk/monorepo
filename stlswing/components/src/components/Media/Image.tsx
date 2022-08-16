@@ -1,15 +1,6 @@
-import { endOfNextYear } from '@stlswing/utils'
-import React, {
-  Children,
-  MutableRefObject,
-  useEffect,
-  useRef,
-  useState
-} from 'react'
-import useMeasure from 'react-use-measure'
-import { useOnScreen } from '../../hooks/useOnScreen'
+import { animated, useSpring } from '@react-spring/web'
+import React, { useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { useSpring, animated } from '@react-spring/web'
 
 export type ImageProps = {
   src: string

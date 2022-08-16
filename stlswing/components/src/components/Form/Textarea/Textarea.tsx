@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputProps } from '../Input/types'
+import { InputProps } from '../Input/input.types'
 import { InputError } from '../Input/InputError'
 import { pick } from 'ramda'
 

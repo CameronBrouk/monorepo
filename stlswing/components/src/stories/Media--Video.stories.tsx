@@ -1,6 +1,7 @@
+import React from 'react'
 import { Story } from '@ladle/react'
-import '../../index.css'
 import { Video } from '../components'
+
 const example =
   'https://stlswing.dance/static/media/ilhc-2013.35537b6d489a16246455.mp4'
 export const Basic: Story = () => {

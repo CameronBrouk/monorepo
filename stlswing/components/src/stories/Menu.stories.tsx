@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Story } from '@ladle/react'
 import { Menu, MenuProps } from '../components/Menu/Menu'
 import { ActionsMenu as ActionsMenuComponent } from '../components/Menu/ActionsMenu'

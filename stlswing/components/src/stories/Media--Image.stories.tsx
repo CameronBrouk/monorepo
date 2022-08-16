@@ -1,5 +1,5 @@
+import React from 'react'
 import { Story } from '@ladle/react'
-import '../../index.css'
 import { faker } from '@faker-js/faker'
 import { Image } from '../components/Media/Image'
 import { range } from 'ramda'

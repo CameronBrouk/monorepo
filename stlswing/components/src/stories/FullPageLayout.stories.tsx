@@ -1,3 +1,4 @@
+import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import type { Story } from '@ladle/react'
 import { FullPageContent as FullPageContentComponent } from '../components/FullPageLayout/FullPageContent'

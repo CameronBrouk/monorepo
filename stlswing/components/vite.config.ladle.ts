@@ -10,15 +10,6 @@ export default defineConfig({
       cache: true,
       throwOnError: true
     }),
-    // @ts-ignore
-    react({
-      include: ['**/*.{tsx|ts}'],
-      fastRefresh: process.env.NODE_ENV !== 'test'
-    })
-  ],
-  build: {
-    rollupOptions: {
-      treeshake: true
-    }
-  }
+    react()
+  ]
 })

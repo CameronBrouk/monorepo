@@ -1,21 +1,21 @@
+import React from 'react'
 import { Story } from '@ladle/react'
 import { useForm } from 'react-hook-form'
-import * as T from './Textarea/Textarea'
-import { SubmitButton } from '../Button'
+import * as C from '../components'
 
-export const Textarea: Story<T.TextareaProps> = (props) => {
+export const Textarea: Story<C.TextareaProps> = (props) => {
   const form = useForm()
 
   return (
     <form onSubmit={form.handleSubmit(console.log)}>
-      <T.Textarea
+      <C.Textarea
         {...props}
         name='description'
         maxLength={55}
         label='Description'
         form={form}
       />
-      <SubmitButton>Submit</SubmitButton>
+      <C.SubmitButton>Submit</C.SubmitButton>
     </form>
   )
 }

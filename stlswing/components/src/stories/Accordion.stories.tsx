@@ -1,3 +1,4 @@
+import React from 'react'
 import * as A from '../components/Accordion/Accordion'
 
 export const Accordion = (props) => {

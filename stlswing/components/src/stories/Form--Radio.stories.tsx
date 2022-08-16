@@ -1,24 +1,15 @@
 import { Story } from '@ladle/react'
-import { Input as InputComponent } from './Input/Input'
-import { useForm } from 'react-hook-form'
-import { InputProps } from './Input/types'
-import {
-  Textarea as TextareaComponent,
-  TextareaProps
-} from './Textarea/Textarea'
-import { Radio as RadioComponent } from './Radio/Radio'
-import { BlockRadioButton as BlockRadioButtonComponent } from './Radio/BlockRadioButton'
-import { DescriptiveRadioButton as DescriptiveRadioButtonComponent } from './Radio/DescriptiveRadioButton'
-import * as Sliders from './Slider'
+import React from 'react'
 import { useState } from 'react'
-import { Divider } from '../Dividers/Divider'
+import { useForm } from 'react-hook-form'
+import { Radio, DescriptiveRadioButton } from '../components'
 
-export const Radio: Story<any> = (props) => {
+export const Basic: Story<any> = (props) => {
   const form = useForm()
   return (
     <>
       <form onSubmit={form.handleSubmit(console.log)}>
-        <RadioComponent<number>
+        <Radio<number>
           form={form}
           name='test-radio'
           label='Test Radio'
@@ -28,24 +19,24 @@ export const Radio: Story<any> = (props) => {
             { name: '2', value: 2 },
             { name: '3', value: 3 }
           ]}
-        ></RadioComponent>
+        />
       </form>
     </>
   )
 }
 
-export const DescriptiveRadioButton: Story<any> = (props) => {
+export const WithText: Story<any> = (props) => {
   const [checked, setChecked] = useState<'Radio 1' | 'Radio 2'>('Radio 1')
   return (
     <div>
-      <DescriptiveRadioButtonComponent
+      <DescriptiveRadioButton
         description='This is a description'
         name='Radio Button Name'
         checked={checked === 'Radio 1'}
         onClick={() => setChecked('Radio 1')}
         {...props}
       />
-      <DescriptiveRadioButtonComponent
+      <DescriptiveRadioButton
         description='This is a description'
         name='Radio Button Name'
         checked={checked === 'Radio 2'}
@@ -55,4 +46,3 @@ export const DescriptiveRadioButton: Story<any> = (props) => {
     </div>
   )
 }
-DescriptiveRadioButton.args = {}

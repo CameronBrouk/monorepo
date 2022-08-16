@@ -12,24 +12,28 @@ type OptionsListProps = {
   multiple?: boolean
 }
 
-export const OptionsList = (props: OptionsListProps) => {
-  return Children.map(props.children, (child, i) =>
-    searchObject(
-      { v: child.props.value, l: child.props.label },
-      props.searchTerm
-    ) ? (
-      <Option
-        key={i}
-        selected={!!find(propEq('value', child.props.value), props.selections)}
-        onClick={() =>
-          props.handleSelect({
-            value: child.props.value,
-            label: child.props.label
-          })
-        }
-        {...child.props}
-        role={props.multiple ? 'checkbox' : 'radio'}
-      />
-    ) : null
-  )
-}
+export const OptionsList = (props: OptionsListProps) => (
+  <>
+    {Children.map(props.children, (child, i) =>
+      searchObject(
+        { v: child.props.value, l: child.props.label },
+        props.searchTerm
+      ) ? (
+        <Option
+          key={i}
+          selected={
+            !!find(propEq('value', child.props.value), props.selections)
+          }
+          onClick={() =>
+            props.handleSelect({
+              value: child.props.value,
+              label: child.props.label
+            })
+          }
+          {...child.props}
+          role={props.multiple ? 'checkbox' : 'radio'}
+        />
+      ) : null
+    )}
+  </>
+)

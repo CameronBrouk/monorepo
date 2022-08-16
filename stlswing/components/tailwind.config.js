@@ -1,11 +1,11 @@
 module.exports = {
-  content: [
-    './index.html',
-    './src/**/*.{ts,tsx}',
-    './node_modules/components/src/**/*.{js,jsx,ts,tsx}'
-  ],
+  jit: true,
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {}
   },
-  plugins: []
+  plugins: [],
+  corePlugins: {
+    preflight: false
+  }
 }

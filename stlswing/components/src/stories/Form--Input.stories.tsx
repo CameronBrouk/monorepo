@@ -1,16 +1,12 @@
+import React from 'react'
 import { Story } from '@ladle/react'
-import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { SubmitButton } from '../Button'
-import { Divider } from '../Dividers/Divider'
-import { ObjectDisplay } from '../Text/ObjectDisplay'
-import { Input } from './Input/Input'
-import { InputProps } from './Input/types'
-import { Option, Select } from './Select'
+import { SubmitButton, Input, InputProps } from '../components'
 
 const inputFieldArgs = {
   name: 'name',
   label: 'Name',
+  noLabel: false,
   placeholder: 'Name Placeholder',
   type: 'text',
   autoFocus: false,

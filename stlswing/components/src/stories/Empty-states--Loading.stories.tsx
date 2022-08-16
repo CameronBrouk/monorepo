@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Story } from '@ladle/react'
 import { Loading } from '../components'
 

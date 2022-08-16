@@ -1,3 +1,4 @@
+import React from 'react'
 import { Story } from '@ladle/react'
 import { addDays, addHours } from 'date-fns'
 import { useState } from 'react'
@@ -24,6 +25,7 @@ export const DateRangePicker: Story = (props) => {
 
   return (
     <div className='w-1/2'>
+      <p className='text-2xl font-bold text-center'>WORK IN PROGRESS</p>
       <DayRangePicker
         activeDate={type}
         setActiveDate={setType}

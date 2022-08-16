@@ -403,6 +403,10 @@
       "allowedCategories": [ "tools" ]
     },
     {
+      "name": "source-map-explorer",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "storybook-builder-vite",
       "allowedCategories": [ "production" ]
     },

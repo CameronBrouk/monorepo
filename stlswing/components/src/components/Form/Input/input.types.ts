@@ -12,7 +12,7 @@ export type InputProps = {
   defaultValue?: string
   onChange?: (value: any) => void
   transform?: (value: any) => void
-  hideLabel?: boolean
+  noLabel?: boolean
   prependElement?: React.ReactNode
   editable?: boolean
   appendElement?: React.ReactNode

@@ -1,10 +1,10 @@
 import { Story } from '@ladle/react'
-import * as T from '../components/Table/index'
+import * as T from '../components'
 import { faker } from '@faker-js/faker'
 import { prop, range, times } from 'ramda'
 import { formatDate, wait } from '@stlswing/utils'
 import { ObjectDisplay } from '../components/Text/ObjectDisplay'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const makePerson = (i: number) => ({
   id: i,

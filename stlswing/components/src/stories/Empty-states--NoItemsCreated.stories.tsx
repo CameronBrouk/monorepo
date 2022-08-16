@@ -1,7 +1,5 @@
-import '../../index.css'
-import { faPlus, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { NoItemsCreated } from './NoItemsCreated'
+import React from 'react'
+import { NoItemsCreated } from '../components'
 
 export const Basic = (props) => {
   return <NoItemsCreated title='No Items Created'></NoItemsCreated>
