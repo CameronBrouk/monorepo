@@ -5,9 +5,7 @@ import {
   PrismaClientUnknownRequestError,
   PrismaClientValidationError
 } from '@prisma/client/runtime'
-import {
-  Response
-} from 'express'
+import { Response } from 'express'
 
 export const handleError = (res: Response) => (e: any) => {
   res.send(500)

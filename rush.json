@@ -29,12 +29,12 @@
   "projects": [
     {
       "packageName": "@stlswing/frontend",
-      "projectFolder": "stlswing/frontend",
+      "projectFolder": "apps/frontend",
       "reviewCategory": "production"
     },
     {
       "packageName": "@stlswing/backend",
-      "projectFolder": "stlswing/backend",
+      "projectFolder": "apps/backend",
       "reviewCategory": "production"
     },
     {
