@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash'
+import { isEmpty } from 'ramda'
 
 export const logObj = (name: string, object?: any) => {
   if (!object) return

@@ -1,4 +1,6 @@
-export * from './crud/makeCrudEndpoints'
-export * from './logging/logging'
-export * from './errors/errors'
-export * from './permissions/permissions'
+import { makeCrudEndpoints } from './crud/makeCrudEndpoints.js'
+export { makeCrudEndpoints }
+export const hello = () => console.log('hello')
+export * from './logging/logging.js'
+export * from './errors/errors.js'
+export * from './permissions/permissions.js'

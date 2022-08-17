@@ -1,10 +1,10 @@
-import {
-  PrismaClientInitializationError,
-  PrismaClientKnownRequestError,
-  PrismaClientRustPanicError,
-  PrismaClientUnknownRequestError,
-  PrismaClientValidationError
-} from '@prisma/client/runtime'
+// import {
+//   PrismaClientInitializationError,
+//   PrismaClientKnownRequestError,
+//   PrismaClientRustPanicError,
+//   PrismaClientUnknownRequestError,
+//   PrismaClientValidationError
+// } from '@prisma/client/runtime'
 
 export type PrismaError = {
   code: number
@@ -23,18 +23,18 @@ export const handlePrismaErrors = <T>(e: T): PrismaError => {
     }
   }
 
-  if (
-    e instanceof PrismaClientValidationError ||
-    e instanceof PrismaClientKnownRequestError ||
-    e instanceof PrismaClientInitializationError ||
-    e instanceof PrismaClientRustPanicError ||
-    e instanceof PrismaClientUnknownRequestError
-  )
-    return {
-      code: 500,
-      message: e.message,
-      meta: e
-    }
+  // if (
+  //   e instanceof PrismaClientValidationError ||
+  //   e instanceof PrismaClientKnownRequestError ||
+  //   e instanceof PrismaClientInitializationError ||
+  //   e instanceof PrismaClientRustPanicError ||
+  //   e instanceof PrismaClientUnknownRequestError
+  // )
+  //   return {
+  //     code: 500,
+  //     message: e.message,
+  //     meta: e
+  //   }
 
   return {
     code: 500,

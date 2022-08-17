@@ -1,8 +1,8 @@
 import { TableDefaults } from '@fp-unimpaired/interfaces'
 import { z, ZodObject } from 'zod'
 import { Request, Response } from 'express'
-import { omit } from 'lodash/fp'
-import { logLine } from '../logging/logging'
+import { omit } from 'ramda'
+import { logLine } from '../logging/logging.js'
 
 export const omitDefaults = omit([
   'createdAt',

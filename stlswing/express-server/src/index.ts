@@ -1,7 +1,7 @@
 import { makeCrudEndpoints } from '@fp-unimpaired/backend'
 import { PrismaClient } from '@prisma/client'
 import express from 'express'
-import { userPayload } from './tables/User/User'
+import { userPayload } from './tables/User/User.js'
 
 export type TableNames = 'todo' | 'todoList' | 'person' | 'user' | 'permission'
 
@@ -26,10 +26,6 @@ makeCrudEndpoints('todoList', app, prisma)
 makeCrudEndpoints('person', app, prisma)
 makeCrudEndpoints('user', app, prisma, {
   zod: userPayload
-})
-
-app.get('/', () => {
-  // test stuff
 })
 
 // Run Server

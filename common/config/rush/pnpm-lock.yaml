@@ -9805,6 +9805,21 @@ packages:
       inherits: 2.0.4
     dev: false
 
+  /rollup-plugin-typescript2/0.32.1_rollup@2.75.7+typescript@4.7.4:
+    resolution: {integrity: sha512-RanO8bp1WbeMv0bVlgcbsFNCn+Y3rX7wF97SQLDxf0fMLsg0B/QFF005t4AsGUcDgF3aKJHoqt4JF2xVaABeKw==}
+    peerDependencies:
+      rollup: '>=1.26.3'
+      typescript: '>=2.4.0'
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      find-cache-dir: 3.3.2
+      fs-extra: 10.1.0
+      resolve: 1.22.1
+      rollup: 2.75.7
+      tslib: 2.4.0
+      typescript: 4.7.4
+    dev: false
+
   /rollup/2.75.7:
     resolution: {integrity: sha512-VSE1iy0eaAYNCxEXaleThdFXqZJ42qDBatAwrfnPlENEZ8erQ+0LYX4JXOLPceWfZpV1VtZwZ3dFCuOZiSyFtQ==}
     engines: {node: '>=10.0.0'}
@@ -11484,7 +11499,7 @@ packages:
     dev: false
 
   file:projects/backend.tgz_5e1138eee0ca5812d9e4dd44429416b2:
-    resolution: {integrity: sha512-8mTSZBnzz0N0o2lRPstwCC4J+YqNl7TUw2AHpmQvt1g/q+dICOvRkEvaPrWUPrRGcvWqv+zLeowD5XkcK0tL2A==, tarball: file:projects/backend.tgz}
+    resolution: {integrity: sha512-VpoV4xvTO2aAK1VFnrKhkCRgCb90QVaS7M6+uiF40247ylwJJ68ZciCVkBjNcawVW7DRX795FYCKcFswn5ORQA==, tarball: file:projects/backend.tgz}
     id: file:projects/backend.tgz
     name: '@rush-temp/backend'
     version: 0.0.0
@@ -11518,6 +11533,8 @@ packages:
       nodemon: 2.0.18
       prisma: 3.15.2
       ramda: 0.28.0
+      rollup: 2.75.7
+      rollup-plugin-typescript2: 0.32.1_rollup@2.75.7+typescript@4.7.4
       rxjs: 7.5.5
       ts-node: 10.8.1_c59db064b1465442ee072998ff39bc2c
       ts-node-dev: 2.0.0_f4cd7b991227ad7668d5049b9d2ac65b

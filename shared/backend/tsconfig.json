@@ -1,6 +1,23 @@
 {
-  "extends": "./node_modules/my-toolchain/includes/tsconfig-web.json",
   "compilerOptions": {
-    "types": ["jest"]
-  }
+    "types": ["jest"],
+    "lib": ["es2015"],
+    "sourceMap": true,
+    "strictFunctionTypes": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "module": "es2022",
+    "target": "es2022",
+    "moduleResolution": "NodeNext",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib"]
 }

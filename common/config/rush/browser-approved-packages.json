@@ -451,6 +451,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "rollup-plugin-typescript2",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "rxjs",
       "allowedCategories": [ "production" ]
     },

@@ -3,13 +3,19 @@
     "baseUrl": "src",
     "rootDir": "src",
     "outDir": "dist",
-    "lib": ["es2015", "esnext"],
-    "target": "ES6",
+    "lib": [
+      "es2015",
+      "esnext",
+      "es2016",
+      "es5",
+      "scripthost",
+      "es2015.collection",
+      "es2015.promise",
+      "es2015.iterable"
+    ],
     "allowJs": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "module": "commonjs",
     "removeComments": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,7 +26,11 @@
     "noEmitOnError": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
-    "pretty": true
+    "pretty": true,
+    "composite": true,
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "NodeNext"
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.spec.ts", "node_modules", "dist"]

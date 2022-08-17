@@ -1,6 +1,6 @@
 import { OmitDefaults, TableDefaults } from '@fp-unimpaired/interfaces'
 import { Express, Request, Response } from 'express'
-import { PermissionsMap } from '../permissions/permissions'
+import { PermissionsMap } from '../permissions/permissions.js'
 import { flatten, fromPairs } from 'ramda'
 import { z, ZodObject } from 'zod'
 import {
@@ -10,8 +10,8 @@ import {
   validateQueryStringLength,
   validateReqestBody,
   validateRequestQuery
-} from './crud.helpers'
-import { getPrismaCrud } from './getPrismaCrud'
+} from './crud.helpers.js'
+import { getPrismaCrud } from './getPrismaCrud.js'
 
 export const makeCrudEndpoints = <
   T extends TableDefaults,

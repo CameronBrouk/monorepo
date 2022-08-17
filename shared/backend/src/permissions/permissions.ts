@@ -1,4 +1,4 @@
-import { getPrismaCrud } from '../crud/getPrismaCrud'
+import { getPrismaCrud } from '../crud/getPrismaCrud.js'
 
 type EndpointFunctions = ReturnType<typeof getPrismaCrud>
 

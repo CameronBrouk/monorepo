@@ -4,14 +4,17 @@
   "description": "",
   "author": "Cameron Brouk",
   "license": "ISC",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "lib",
+    "package.json"
+  ],
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "serve:dev": "pm2 --name backend:dev start npm -- start",
-    "log:dev": "pm2 log backend:dev",
-    "serve:types": "pm2 --name backend:types start npm -- run build:watch",
+    "serve": "pm2 --name shared:backend start npm -- run build:watch",
     "log:types": "pm2 log backend:types",
     "stop": "pm2 stop Backend"
   },
@@ -23,7 +26,6 @@
   },
   "devDependencies": {
     "@prisma/client": "~3.15.2",
-    "@types/lodash": "~4.14.182",
     "@fp-unimpaired/interfaces": "^1.0.0",
     "@fp-unimpaired/utils": "~1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
@@ -52,7 +54,9 @@
     "typescript": "^4.5.4",
     "ts-node-dev": "~2.0.0",
     "@types/body-parser": "~1.19.2",
-    "faker": "~6.6.6"
+    "faker": "~6.6.6",
+    "rollup": "~2.75.7",
+    "rollup-plugin-typescript2": "~0.32.1"
   },
   "peerDependencies": {
     "node-notifier": "~10.0.1",

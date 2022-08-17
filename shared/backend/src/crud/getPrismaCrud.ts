@@ -1,8 +1,8 @@
 // @ts-nocheck
 import { OmitDefaults, TableDefaults } from '@fp-unimpaired/interfaces'
-import { getPrismaQueryParamFilters, omitDefaults } from './crud.helpers'
-import { omit, range, update } from 'lodash/fp'
-import { handlePrismaErrors } from '../errors/errors'
+import { getPrismaQueryParamFilters, omitDefaults } from './crud.helpers.js'
+import { omit, range, update } from 'ramda'
+import { handlePrismaErrors } from '../errors/errors.js'
 import { Request } from 'express'
 
 export const getPrismaCrud = <T extends TableDefaults>(
