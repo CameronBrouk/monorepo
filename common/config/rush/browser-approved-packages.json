@@ -35,6 +35,14 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@fp-unimpaired/interfaces",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@fp-unimpaired/utils",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@ladle/react",
       "allowedCategories": [ "production" ]
     },

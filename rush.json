@@ -28,34 +28,34 @@
   },
   "projects": [
     {
-      "packageName": "@stlswing/frontend",
-      "projectFolder": "apps/frontend",
+      "packageName": "@fp-unimpaired/backend",
+      "projectFolder": "shared/backend",
       "reviewCategory": "production"
     },
     {
-      "packageName": "@stlswing/backend",
-      "projectFolder": "apps/backend",
+      "packageName": "@fp-unimpaired/interfaces",
+      "projectFolder": "shared/interfaces",
       "reviewCategory": "production"
     },
     {
-      "packageName": "@stlswing/interfaces",
-      "projectFolder": "stlswing/interfaces",
+      "packageName": "@fp-unimpaired/utils",
+      "projectFolder": "shared/utils",
       "reviewCategory": "production"
     },
     {
-      "packageName": "@stlswing/utils",
-      "projectFolder": "stlswing/utils",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@stlswing/components",
-      "projectFolder": "stlswing/components",
+      "packageName": "@fp-unimpaired/react",
+      "projectFolder": "shared/react",
       "reviewCategory": "production"
     },
     {
       "packageName": "my-toolchain",
       "projectFolder": "tools/my-toolchain",
       "reviewCategory": "tools"
+    },
+    {
+      "packageName": "@stlswing/express-server",
+      "projectFolder": "stlswing/express-server",
+      "reviewCategory": "production"
     }
   ]
 }
