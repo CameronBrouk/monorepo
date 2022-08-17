@@ -35,6 +35,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@fp-unimpaired/backend",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@fp-unimpaired/interfaces",
       "allowedCategories": [ "production" ]
     },
@@ -263,6 +267,38 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "filepond",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "filepond-plugin-file-rename",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "filepond-plugin-get-file",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "filepond-plugin-image-exif-orientation",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "filepond-plugin-image-preview",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "filepond-plugin-image-resize",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "filepond-plugin-media-preview",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "firebase",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "framer-motion",
       "allowedCategories": [ "production" ]
     },
@@ -371,6 +407,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "react-filepond",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "react-hook-form",
       "allowedCategories": [ "production" ]
     },
@@ -383,6 +423,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "react-query",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "react-router",
       "allowedCategories": [ "production" ]
     },
@@ -392,6 +436,10 @@
     },
     {
       "name": "react-spring",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "react-toastify",
       "allowedCategories": [ "production" ]
     },
     {
@@ -464,6 +512,10 @@
     },
     {
       "name": "vite-plugin-windicss",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "vite-tsconfig-paths",
       "allowedCategories": [ "production" ]
     },
     {

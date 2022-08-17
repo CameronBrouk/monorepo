@@ -4,7 +4,8 @@
   "description": "",
   "author": "Cameron Brouk",
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -12,19 +13,17 @@
     "log:dev": "pm2 log backend:dev",
     "serve:types": "pm2 --name backend:types start npm -- run build:watch",
     "log:types": "pm2 log backend:types",
-    "serve": "npm run serve:dev && npm run serve:types",
     "stop": "pm2 stop Backend"
   },
   "dependencies": {
     "express": "~4.18.1",
     "ramda": "~0.28.0",
-    "@prisma/client": "~3.15.2",
-    "@types/lodash": "~4.14.182",
-    "@fp-unimpaired/utils": "~1.0.0",
     "zod": "~3.17.3",
     "jose": "~4.8.1"
   },
   "devDependencies": {
+    "@prisma/client": "~3.15.2",
+    "@types/lodash": "~4.14.182",
     "@fp-unimpaired/interfaces": "^1.0.0",
     "@fp-unimpaired/utils": "~1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",

@@ -1,6 +1,6 @@
 import { OmitDefaults, TableDefaults } from '@fp-unimpaired/interfaces'
 import { Express, Request, Response } from 'express'
-import { PermissionsMap } from 'permissions/permissions'
+import { PermissionsMap } from '../permissions/permissions'
 import { flatten, fromPairs } from 'ramda'
 import { z, ZodObject } from 'zod'
 import {
