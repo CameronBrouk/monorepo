@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "stlswingdev",
+    "prod": "stlswingdev",
+    "dev": "stlswingdev"
+  }
+}

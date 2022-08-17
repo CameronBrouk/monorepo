@@ -1,0 +1,84 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+  	function getDocument(collectionName) {
+  		return get(/databases/$(database)/documents/$(collectionName)/$(request.auth.uid)).data
+  	}
+
+  	function getPermission() {
+			return getDocument('permissions')
+		}
+
+    function isMember() {
+      return getDocument('users').member == true
+    }
+
+		function hasRole(role) {
+			return getPermission().role == role
+		}
+
+  	match /users/{userId} {
+    	allow get, update: if userId == request.auth.uid
+      allow read, write: if hasRole('employee') || hasRole('admin')
+    }
+
+  	match /permissions/{userId} {
+    	allow get: if request.auth != null && request.auth.uid == userId
+      allow read, write: if hasRole('admin') || hasRole('employee')
+    }
+
+  	match /groupClasses/{id} {
+    	allow read;
+      allow write: if hasRole('admin') || hasRole('employee')
+    }
+
+    match /privateLessons/{id} {
+    	allow read, write: if true
+    }
+
+    match /events/{id} {
+    	allow read;
+      allow write: if hasRole('admin') || hasRole('employee')
+    }
+
+    match /orders/{id} {
+      allow read;
+      allow write: if hasRole('admin') || hasRole('employee') || isMember()
+    }
+
+    match /costs/{id} {
+      allow read, write: if hasRole('admin') || hasRole('employee')
+    }
+
+    match /projections/{id} {
+    	allow read, write: if hasRole('admin') || hasRole('employee')
+    }
+
+    match /assets/{id} {
+      allow read, write: if true
+    }
+
+    match /assetAssociations/{id} {
+      allow read, write: if true
+    }
+
+    match /history/{id} {
+      allow read, write: if true
+    }
+
+    match /faq/{id} {
+      allow read: if true
+      allow write: if hasRole('admin') || hasRole('employee')
+    }
+
+    match /changelog/{id}{
+      allow read, write: if true
+    }
+
+    match /transactions/{id}{
+      allow read, write: if true
+    }
+  }
+}
