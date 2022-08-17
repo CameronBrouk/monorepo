@@ -5,15 +5,16 @@ import eslint from 'vite-plugin-eslint'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    eslint({
-      fix: true,
-      cache: true,
-      throwOnError: true
-    }),
-    // @ts-ignore
     react({
       include: ['**/*.{tsx|ts}'],
       fastRefresh: process.env.NODE_ENV !== 'test'
+    }),
+    eslint({
+      fix: true,
+      cache: true,
+      throwOnError: true,
+      include: ['src/**'],
+      formatter: 'tap'
     })
   ],
   build: {

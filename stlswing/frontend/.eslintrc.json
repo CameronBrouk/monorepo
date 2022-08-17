@@ -27,6 +27,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier", "unused-imports"],
   "rules": {
+    "no-undef": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [
       1,

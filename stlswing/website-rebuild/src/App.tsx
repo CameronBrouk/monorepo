@@ -1,9 +1,8 @@
+import { Accordion, Divider } from '@fp-unimpaired/react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter } from 'react-router-dom'
 import useMeasure from 'react-use-measure'
 import { CurrentUserProvider } from './firebase/user'
-import { MobileBottomNav } from './layout/MobileBottomNav'
-import ApplicationRouter from './Router'
 import { useIsMobile } from './shared/hooks/useIsMobile'
 import { useWindowSize } from './shared/hooks/useWindowSize'
 
@@ -27,14 +26,18 @@ export function App() {
         <QueryClientProvider client={reactQueryClient}>
           {/* PUT EVERYTHING INSIDE OF THIS DIV */}
           <div
-            className='flex flex-col overflow-hidden'
+            className='flex flex-col overflow-hidden w-full'
             style={{ height: windowHeight - headerHeight }}
           >
-            <div className='h-full overflow-y-auto scroll-smooth'>
-              <ApplicationRouter />
-            </div>
+            <Divider />
+            <Accordion title='test' />
 
-            <MobileBottomNav ref={ref} />
+            <p>test</p>
+            {/* <div className='h-full overflow-y-auto scroll-smooth'>
+              <ApplicationRouter />
+            </div> */}
+
+            {/* <MobileBottomNav ref={ref} /> */}
           </div>
         </QueryClientProvider>
       </CurrentUserProvider>

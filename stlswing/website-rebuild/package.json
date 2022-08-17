@@ -23,7 +23,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@react-spring/web": "~9.4.5",
-    "@types/ramda": "~0.28.14",
     "change-case": "~4.1.2",
     "chrono-node": "~2.3.8",
     "date-fns": "~2.28.0",
@@ -48,9 +47,12 @@
     "react-router-dom": "~6.3.0",
     "react-toastify": "^9.0.5",
     "react-use-measure": "~2.1.1",
-    "rxjs": "~7.5.5"
+    "rxjs": "~7.5.5",
+    "@fp-unimpaired/react": "~1.0.0",
+    "@fp-unimpaired/utils": "~1.0.0"
   },
   "devDependencies": {
+    "@types/ramda": "~0.28.14",
     "source-map-explorer": "~2.5.2",
     "mockdate": "~3.0.5",
     "@faker-js/faker": "~7.3.0",
