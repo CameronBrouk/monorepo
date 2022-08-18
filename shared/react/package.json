@@ -10,17 +10,12 @@
   "typings": "types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js"
-    },
-    "./dist/style.css": "./dist/style.css"
+      "import": "./dist/index.es.js"
+    }
   },
   "scripts": {
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.peerDependencies\"",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "stories": "ladle serve",
-    "ladle:build": "ladle build",
-    "ladle:preview": "ladle preview",
     "types": "tsc --watch",
     "build:dev": "vite build --config ./vite.config.dev.ts",
     "serve:types": "pm2 --name components:types start npm -- run types",
@@ -37,36 +32,27 @@
     "test:vitest:related": "vitest related $(git diff --name-only . | grep src | sed 's/.*(src)/\\1/')"
   },
   "dependencies": {
+    "@ladle/react": "~1.1.1",
     "ramda": "~0.28.0",
     "@react-spring/web": "~9.4.5",
+    "react-hook-form": "~7.33.0",
+    "@faker-js/faker": "~7.3.0",
     "rxjs": "~7.5.5",
     "@fortawesome/fontawesome-svg-core": "~6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
+    "react-router": "~6.3.0",
+    "react-router-dom": "~6.3.0",
     "observable-hooks": "~4.2.0",
     "change-case": "~4.1.2",
     "react-use-measure": "~2.1.1",
     "date-fns": "~2.28.0",
     "chrono-node": "~2.3.8",
-    "react-intersection-observer": "~9.3.5"
-  },
-  "peerDependencies": {
-    "react-hook-form": "~7.33.0",
-    "node-notifier": "~10.0.1",
+    "react-intersection-observer": "~9.3.5",
     "react": "~18.2.0",
-    "react-dom": "~18.2.0",
-    "react-router": "~6.3.0",
-    "react-router-dom": "~6.3.0"
+    "react-dom": "~18.2.0"
   },
   "devDependencies": {
-    "react-hook-form": "~7.33.0",
-    "node-notifier": "~10.0.1",
-    "react": "~18.2.0",
-    "react-dom": "~18.2.0",
-    "react-router": "~6.3.0",
-    "react-router-dom": "~6.3.0",
-    "@ladle/react": "~1.1.1",
-    "@faker-js/faker": "~7.3.0",
     "@testing-library/dom": "~8.11.3",
     "@testing-library/jest-dom": "~5.16.2",
     "@testing-library/react": "~13.3.0",
@@ -102,10 +88,9 @@
     "my-toolchain": "^1.0.0",
     "@fp-unimpaired/interfaces": "^1.0.0",
     "@types/ramda": "~0.28.14",
-    "@fp-unimpaired/utils": "~1.0.0",
-    "source-map-explorer": "~2.5.2",
-    "vite-plugin-dts": "~1.2.1",
-    "rollup": "~2.75.7"
+    "@fp-unimpaired/utils": "~1.0.0"
   },
-  "sideEffects": false
+  "peerDependencies": {
+    "node-notifier": "~10.0.1"
+  }
 }
