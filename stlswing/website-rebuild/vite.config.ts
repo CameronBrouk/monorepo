@@ -10,8 +10,7 @@ export default defineConfig({
     // splitVendorChunkPlugin(),
     eslint({
       fix: true,
-      cache: true,
-      formatter: 'tap'
+      cache: true
     }),
     react({
       include: ['**/*.{tsx|ts}'],
