@@ -2,7 +2,7 @@ import { Story } from '@ladle/react'
 import * as T from '../components'
 import { faker } from '@faker-js/faker'
 import { prop, range, times } from 'ramda'
-import { formatDate, wait } from '@fp-unimpaired/utils'
+import { formatDate, wait } from '@unimpaired/utils'
 import { ObjectDisplay } from '../components/Text/ObjectDisplay'
 import React, { useEffect, useState } from 'react'
 

@@ -6,7 +6,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { DayRangePicker } from '../DatePicker/DayRangePicker'
 import { format, Interval } from 'date-fns'
-import { formatDate } from '@fp-unimpaired/utils'
+import { formatDate } from '@unimpaired/utils'
 import { LockableInput } from '../../Input/LockableInput'
 import { useForm } from 'react-hook-form'
 interface Props {

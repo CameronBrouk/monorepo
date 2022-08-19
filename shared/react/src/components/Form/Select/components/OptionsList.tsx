@@ -1,4 +1,4 @@
-import { searchObject } from '@fp-unimpaired/utils'
+import { searchObject } from '@unimpaired/utils'
 import { find, propEq } from 'ramda'
 import React, { Children } from 'react'
 import { Selection } from '../Select'

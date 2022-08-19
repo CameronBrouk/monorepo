@@ -1,7 +1,7 @@
 import { toPairs } from 'ramda'
 import { parseDate } from 'chrono-node'
 import { InfoSection } from './InfoSection'
-import { formatDate } from '@fp-unimpaired/utils'
+import { formatDate } from '@unimpaired/utils'
 
 export interface ObjectDisplayProps {
   object: Record<string, any>

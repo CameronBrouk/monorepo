@@ -1,6 +1,6 @@
 import { useIsMobile, useWindowSize } from '../../hooks'
 import React, { useState } from 'react'
-import { dayAbbreviations, formatDate } from '@fp-unimpaired/utils'
+import { dayAbbreviations, formatDate } from '@unimpaired/utils'
 import { CalendarHeader, DayTile } from './components'
 import { getDayTiles } from './helpers/calendar.helpers'
 import { Modal } from '../Modal'

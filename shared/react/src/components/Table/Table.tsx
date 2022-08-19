@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { usePagination } from './hooks/usePagination'
-import { addOrRemove, fuzzySearch } from '@fp-unimpaired/utils'
+import { addOrRemove, fuzzySearch } from '@unimpaired/utils'
 import {
   getDisplayedColumns,
   generateTableData

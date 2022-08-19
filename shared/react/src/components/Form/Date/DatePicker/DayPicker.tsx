@@ -1,6 +1,6 @@
 import React from 'react'
 import { set } from 'date-fns/fp'
-import { dayAbbreviations } from '@fp-unimpaired/utils'
+import { dayAbbreviations } from '@unimpaired/utils'
 import { getDayTiles } from '../../..//Calendar/helpers/calendar.helpers'
 import { DayTile } from '../../../Calendar/components/DayTile'
 import { isSameDay, isSameMonth } from 'date-fns'

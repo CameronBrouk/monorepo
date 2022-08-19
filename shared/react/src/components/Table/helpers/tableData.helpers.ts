@@ -1,6 +1,6 @@
 import { TableSchema } from '../types'
 import { OptionNode } from '../components/NestedOptionsMenu'
-import { fuzzySearch, searchObject } from '@fp-unimpaired/utils'
+import { fuzzySearch, searchObject } from '@unimpaired/utils'
 
 export const getDisplayedColumns = <T>(tableSchema: TableSchema<T>) =>
   Object.entries(tableSchema)

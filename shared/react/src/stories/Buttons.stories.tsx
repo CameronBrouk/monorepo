@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story } from '@ladle/react'
-import { wait } from '@fp-unimpaired/utils'
+import { wait } from '@unimpaired/utils'
 import { useState } from 'react'
 import * as C from '../components'
 import { inc } from 'ramda'

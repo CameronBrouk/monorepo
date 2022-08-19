@@ -1,4 +1,4 @@
-import { makeCrudEndpoints } from '@fp-unimpaired/backend'
+import { makeCrudEndpoints } from '@unimpaired/backend'
 import { PrismaClient } from '@prisma/client'
 import express from 'express'
 import { userPayload } from './tables/User/User.js'

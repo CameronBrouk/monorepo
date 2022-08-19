@@ -28,24 +28,25 @@
   },
   "projects": [
     {
-      "packageName": "@fp-unimpaired/backend",
+      "packageName": "@unimpaired/backend",
       "projectFolder": "shared/backend",
       "reviewCategory": "production"
     },
     {
-      "packageName": "@fp-unimpaired/interfaces",
+      "packageName": "@unimpaired/interfaces",
       "projectFolder": "shared/interfaces",
       "reviewCategory": "production"
     },
     {
-      "packageName": "@fp-unimpaired/utils",
+      "packageName": "@unimpaired/utils",
       "projectFolder": "shared/utils",
       "reviewCategory": "production"
     },
     {
-      "packageName": "@fp-unimpaired/react",
+      "packageName": "@unimpaired/react",
       "projectFolder": "shared/react",
-      "reviewCategory": "production"
+      "reviewCategory": "production",
+      "shouldPublish": true
     },
     {
       "packageName": "my-toolchain",

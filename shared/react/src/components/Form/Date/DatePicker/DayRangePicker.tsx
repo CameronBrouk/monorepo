@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { set, lensProp } from 'ramda'
-import { dayAbbreviations, formatDate } from '@fp-unimpaired/utils'
+import { dayAbbreviations, formatDate } from '@unimpaired/utils'
 import { getDayTiles } from '../../../Calendar/helpers/calendar.helpers'
 import { DayTile } from '../../../Calendar/components/DayTile'
 import {

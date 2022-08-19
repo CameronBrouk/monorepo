@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Stepper, Step } from '../../../Stepper'
 import { YearPicker } from './YearPicker'
-import { getMonthsOfYear, formatDate } from '@fp-unimpaired/utils'
+import { getMonthsOfYear, formatDate } from '@unimpaired/utils'
 import { Button } from '../../../Button'
 import { indexOf } from 'ramda'
 import { DayPicker } from './DayPicker'

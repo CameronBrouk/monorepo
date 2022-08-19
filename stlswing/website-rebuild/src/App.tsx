@@ -1,4 +1,4 @@
-import { Accordion, Divider } from '@fp-unimpaired/react'
+import { Accordion, Divider } from '@unimpaired/react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter } from 'react-router-dom'
 import useMeasure from 'react-use-measure'

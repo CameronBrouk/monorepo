@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { indexOf } from 'ramda'
 import * as D from 'date-fns/fp'
-import { getMonthsOfYear, monthDisplay } from '@fp-unimpaired/utils'
+import { getMonthsOfYear, monthDisplay } from '@unimpaired/utils'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBars,

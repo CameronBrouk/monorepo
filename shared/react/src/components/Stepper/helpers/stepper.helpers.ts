@@ -2,7 +2,7 @@
 // prettier-ignore
 import {isEmpty, map, pipe, prop } from 'ramda';
 import { StepProps } from '../Step'
-import { exists, onlyPopulatedValues } from '@fp-unimpaired/utils'
+import { exists, onlyPopulatedValues } from '@unimpaired/utils'
 
 export const getErrorSteps = (steps: StepProps[]) =>
   steps.filter(({ errors }) => exists(errors))

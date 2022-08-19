@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { formatDate } from '@fp-unimpaired/utils'
+import { formatDate } from '@unimpaired/utils'
 import { format } from 'date-fns/fp'
 import { useTransition } from '@react-spring/web'
 

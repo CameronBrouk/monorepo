@@ -1,5 +1,5 @@
 import { Menu } from '../../../Menu'
-import { formatDate } from '@fp-unimpaired/utils'
+import { formatDate } from '@unimpaired/utils'
 import { addMonths, Interval } from 'date-fns'
 import React, { useState } from 'react'
 import { DateFieldLabel } from '../components/DateField'

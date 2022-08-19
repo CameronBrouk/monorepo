@@ -1,7 +1,7 @@
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Menu } from '../../../Menu'
-import { formatDate } from '@fp-unimpaired/utils'
+import { formatDate } from '@unimpaired/utils'
 import React, { useEffect, useState } from 'react'
 import { DatePicker, HiddenDateProps } from './DatePicker'
 import { format } from 'date-fns/fp'

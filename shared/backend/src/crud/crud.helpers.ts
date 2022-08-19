@@ -1,4 +1,4 @@
-import { TableDefaults } from '@fp-unimpaired/interfaces'
+import { TableDefaults } from '@unimpaired/interfaces'
 import { z, ZodObject } from 'zod'
 import { Request, Response } from 'express'
 import { omit } from 'ramda'

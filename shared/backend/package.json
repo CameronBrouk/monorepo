@@ -1,5 +1,5 @@
 {
-  "name": "@fp-unimpaired/backend",
+  "name": "@unimpaired/backend",
   "version": "1.0.0",
   "description": "",
   "author": "Cameron Brouk",
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@prisma/client": "~3.15.2",
-    "@fp-unimpaired/interfaces": "^1.0.0",
-    "@fp-unimpaired/utils": "~1.0.0",
+    "@unimpaired/interfaces": "~1.0.0",
+    "@unimpaired/utils": "~1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",

@@ -14,7 +14,7 @@
     "log:dev": "pm2 log backend:dev",
     "serve:types": "pm2 --name stlswing:express-server:types start npm -- run build:watch",
     "log:types": "pm2 log backend:types",
-    "serve": "npm run serve:dev && npm run serve:types",
+    "serve": "prisma generate && npm run serve:dev && npm run serve:types",
     "stop": "pm2 stop Backend",
     "migrate": "prisma migrate dev"
   },
@@ -24,14 +24,12 @@
     "rxjs": "~7.5.5",
     "@prisma/client": "~3.15.2",
     "@types/lodash": "~4.14.182",
-    "@fp-unimpaired/utils": "~1.0.0",
     "zod": "~3.17.3",
     "jose": "~4.8.1",
-    "@fp-unimpaired/backend": "~1.0.0"
+    "@unimpaired/backend": "~1.0.0",
+    "@unimpaired/utils": "~1.0.0"
   },
   "devDependencies": {
-    "@fp-unimpaired/interfaces": "^1.0.0",
-    "@fp-unimpaired/utils": "~1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",

@@ -29,7 +29,7 @@
 ### Components
 
 - When building, you must comment out lines 37-42 of the `vite.config.ts` file
-- You must import `@fp-unimpaired/react/style.css` into the main App folder of any app that is using this library
+- You must import `@unimpaired/react/style.css` into the main App folder of any app that is using this library
 - Ladle runs on `http://localhost:61000`
 
 ### Frontent

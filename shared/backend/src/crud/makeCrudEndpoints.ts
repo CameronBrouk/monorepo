@@ -1,4 +1,4 @@
-import { OmitDefaults, TableDefaults } from '@fp-unimpaired/interfaces'
+import { OmitDefaults, TableDefaults } from '@unimpaired/interfaces'
 import { Express, Request, Response } from 'express'
 import { PermissionsMap } from '../permissions/permissions.js'
 import { flatten, fromPairs } from 'ramda'

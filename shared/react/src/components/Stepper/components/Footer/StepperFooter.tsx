@@ -1,7 +1,7 @@
 import React from 'react'
 import { StepProps } from '../../Step'
 import { navigateToStepIndex } from '../../helpers/stepper.helpers'
-import { exists, onlyPopulatedValues } from '@fp-unimpaired/utils'
+import { exists, onlyPopulatedValues } from '@unimpaired/utils'
 import { Button } from '../../../Button'
 
 type Props = {
