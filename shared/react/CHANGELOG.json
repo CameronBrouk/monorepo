@@ -2,6 +2,20 @@
   "name": "@unimpaired/react",
   "entries": [
     {
+      "version": "1.0.4",
+      "tag": "@unimpaired/react_v1.0.4",
+      "date": "Fri, 19 Aug 2022 15:01:41 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Testing publishing package changes",
+            "author": "Cameron Brouk <cameronbrouk@gmail.com>",
+            "commit": "e171ead2061db2c3627bc62f6b0d8c97693938ea"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.3",
       "tag": "@unimpaired/react_v1.0.3",
       "date": "Fri, 19 Aug 2022 14:48:47 GMT",
