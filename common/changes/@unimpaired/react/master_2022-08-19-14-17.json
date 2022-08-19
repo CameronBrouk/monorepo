@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@unimpaired/react",
+      "comment": "Initialize New Package",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@unimpaired/react",
+  "email": "cameronbrouk@gmail.com"
+}
