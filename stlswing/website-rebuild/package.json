@@ -7,7 +7,7 @@
     "serve:dev": "pm2 --name stlswing:dev start npm -- start",
     "serve:test": "pm2 --name stlswing:test start npm -- run test",
     "analyze": "source-map-explorer dist/assets/index.*.js.map",
-    "serve": "pm2 --name stlswing:website start npm -- start",
+    "serve": "pm2 --name stlswing:website start npm -- run start",
     "restart": "pm2 restart --name Frontend ",
     "stop": "pm2 delete stlswing:dev",
     "lint": "eslint src/**/*.ts* --fix",
@@ -17,6 +17,10 @@
     "test:vitest:coverage": "vitest --coverage",
     "test:vitest:prod": "vitest run",
     "test:vitest:related": "vitest related $(git diff --name-only . | grep src | sed 's/.*(src)/\\1/')"
+  },
+  "resolutions": {
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "~6.1.1",
