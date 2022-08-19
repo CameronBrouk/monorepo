@@ -1,7 +1,7 @@
 {
   "name": "@unimpaired/react",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "dist"
   ],
@@ -15,7 +15,6 @@
     }
   },
   "scripts": {
-    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
     "build": "tsc && vite build",
     "stories": "ladle serve",
     "types": "tsc --watch",
