@@ -6,15 +6,12 @@ import * as path from 'path'
 
 export default defineConfig({
   plugins: [
-    // eslint({
-    //   fix: true,
-    //   cache: true,
-    //   throwOnError: true
-    // }),
-    react({
-      include: ['**/*.{tsx|ts}'],
-      exclude: ['./dist', './node_modules']
-    })
+    eslint({
+      fix: true,
+      cache: true,
+      throwOnError: true
+    }),
+    react()
   ],
   resolve: {
     alias: {
@@ -22,14 +19,24 @@ export default defineConfig({
     }
   },
   build: {
-    watch: {
-      exclude: ['dist', 'node_modules']
-    },
+    minify: false,
     lib: {
       entry: 'src/index.ts',
       name: 'index',
-      formats: ['es'],
+      formats: ['es', 'umd'],
       fileName: (format) => `index.${format}.js`
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM'
+        }
+      }
+    },
+    watch: {
+      exclude: ['dist', 'node_modules']
     }
   }
 })

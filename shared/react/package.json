@@ -5,15 +5,17 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.es.js",
+  "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "typings": "types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     }
   },
   "scripts": {
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
     "build": "tsc && vite build",
     "stories": "ladle serve",
     "types": "tsc --watch",
@@ -32,7 +34,6 @@
     "test:vitest:related": "vitest related $(git diff --name-only . | grep src | sed 's/.*(src)/\\1/')"
   },
   "dependencies": {
-    "@ladle/react": "~1.1.1",
     "ramda": "~0.28.0",
     "@react-spring/web": "~9.4.5",
     "react-hook-form": "~7.33.0",
@@ -53,6 +54,7 @@
     "react-dom": "~18.2.0"
   },
   "devDependencies": {
+    "@ladle/react": "~1.1.1",
     "@testing-library/dom": "~8.11.3",
     "@testing-library/jest-dom": "~5.16.2",
     "@testing-library/react": "~13.3.0",
