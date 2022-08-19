@@ -16,7 +16,7 @@
     "changeLogUpdateCommitMessage": "Deleting change files and updating change logs for package updates. [skip-ci]"
   },
   "repository": {
-    "url": "https://github.com/CameronBrouk/monorepo-practice",
+    "url": "https://github.com/CameronBrouk/monorepo",
     "defaultBranch": "master",
     "defaultRemote": "origin"
   },
