@@ -24,6 +24,7 @@ export const Accordion = ({ children, title, ...props }: AccordionProps) => {
   })
 
   const svgClasses = isOpen ? 'rotate-180' : 'rotate-0'
+  console.log('Test Rush Publish Workflow')
 
   return (
     <dl
