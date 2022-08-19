@@ -47,6 +47,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@fp-unimpaired/react-unimpaired",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@fp-unimpaired/utils",
       "allowedCategories": [ "production" ]
     },
