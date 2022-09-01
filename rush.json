@@ -62,6 +62,11 @@
       "packageName": "@stlswing/website-rebuild",
       "projectFolder": "stlswing/website-rebuild",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@stlswing/database",
+      "projectFolder": "stlswing/database",
+      "reviewCategory": "production"
     }
   ]
 }

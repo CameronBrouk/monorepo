@@ -9,27 +9,33 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "start": "nodemon dist/index.js",
+    "start": "nodemon src/index.ts",
     "serve:dev": "pm2 --name stlswing:express-server start npm -- start",
     "log:dev": "pm2 log backend:dev",
     "serve:types": "pm2 --name stlswing:express-server:types start npm -- run build:watch",
     "log:types": "pm2 log backend:types",
-    "serve": "prisma generate && npm run serve:dev && npm run serve:types",
+    "serve": "npm run serve:dev && npm run serve:types",
     "stop": "pm2 stop Backend",
-    "migrate": "prisma migrate dev"
+    "test": "vitest",
+    "serve:stlswing": "npm run serve:dev",
+    "serve:stlswing:backend": "npm run serve:dev"
   },
   "dependencies": {
     "express": "~4.18.1",
     "ramda": "~0.28.0",
     "rxjs": "~7.5.5",
-    "@prisma/client": "~3.15.2",
     "@types/lodash": "~4.14.182",
     "zod": "~3.17.3",
     "jose": "~4.8.1",
     "@unimpaired/backend": "~1.0.0",
-    "@unimpaired/utils": "~1.0.0"
+    "@unimpaired/utils": "~1.0.0",
+    "@stlswing/database": "~1.0.0",
+    "rrule": "~2.7.1",
+    "vitest": "~0.5.7",
+    "change-case": "~4.1.2"
   },
   "devDependencies": {
+    "supertest": "~6.2.4",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",
@@ -38,70 +44,30 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "~4.0.0",
     "eslint-plugin-unused-imports": "~2.0.0",
-    "jest": "~28.1.1",
-    "@types/jest": "~28.1.2",
-    "@babel/core": "^7.17.5",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
-    "babel-jest": "~27.5.1",
-    "babel-loader": "^8.2.3",
-    "jest-watch-typeahead": "~1.1.0",
     "my-toolchain": "^1.0.0",
     "ts-node": "~10.8.1",
     "nodemon": "~2.0.16",
-    "prisma": "~3.15.2",
     "@types/ramda": "~0.28.14",
     "@types/node": "^10.9.4",
     "@types/express": "~4.17.13",
     "typescript": "^4.5.4",
     "ts-node-dev": "~2.0.0",
     "@types/body-parser": "~1.19.2",
-    "faker": "~6.6.6"
+    "faker": "~6.6.6",
+    "@types/supertest": "~2.0.12",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "swagger-ui-express": "~4.5.0",
+    "swagger-jsdoc": "~6.2.5",
+    "@types/swagger-jsdoc": "~6.0.1",
+    "@types/swagger-ui-express": "~4.1.3"
   },
   "peerDependencies": {
     "node-notifier": "~10.0.1",
-    "webpack": "^2.0.0"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "notify": true,
-    "notifyMode": "failure",
-    "clearMocks": true,
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
-    },
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "ts",
-      "tsx"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": -10
-      }
-    },
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/.*\\.mock\\.tsx$",
-      "/.*\\.mock\\.ts$"
-    ]
+    "webpack": "^2.0.0",
+    "openapi-types": "12.0.0"
   },
   "babel": {
     "env": {

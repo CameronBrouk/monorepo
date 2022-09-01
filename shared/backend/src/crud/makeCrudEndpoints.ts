@@ -1,4 +1,4 @@
-import { OmitDefaults, TableDefaults } from '@unimpaired/interfaces'
+import { TableDefaults } from '@unimpaired/interfaces'
 import { Express, Request, Response } from 'express'
 import { PermissionsMap } from '../permissions/permissions.js'
 import { flatten, fromPairs } from 'ramda'
@@ -12,6 +12,7 @@ import {
   validateRequestQuery
 } from './crud.helpers.js'
 import { getPrismaCrud } from './getPrismaCrud.js'
+import { handlePrismaErrors } from '../api/error-handling.js'
 
 export const makeCrudEndpoints = <
   T extends TableDefaults,
@@ -53,7 +54,7 @@ export const makeCrudEndpoints = <
   })
 
   // Create One
-  app.post<OmitDefaults<T>>(`/${tableName}`, async (req, res) => {
+  app.post(`/${tableName}`, async (req, res) => {
     // Handle Optional Zod Validation
     if (options?.zod) {
       if (!validateReqestBody(req, res, options.zod)) return
@@ -63,9 +64,7 @@ export const makeCrudEndpoints = <
     // Create in DB
     createOne(req.body)
       .then(handleSuccess(res))
-      .catch((e) => {
-        res.status(500).json(`${e}`)
-      })
+      .catch(handlePrismaErrors(req, res))
   })
 
   // Update One
@@ -79,7 +78,7 @@ export const makeCrudEndpoints = <
 
     updateOne(Number(req.params.id), req.body)
       .then(handleSuccess(res))
-      .catch(handleError(res))
+      .catch(handlePrismaErrors(req, res))
   })
 
   // Duplicate One
@@ -93,7 +92,7 @@ export const makeCrudEndpoints = <
 
     duplicateOne(Number(req.params.id), req.body)
       .then(handleSuccess(res))
-      .catch(handleError(res))
+      .catch(handlePrismaErrors(req, res))
   })
 
   // Delete One
@@ -104,7 +103,7 @@ export const makeCrudEndpoints = <
 
     deleteOne(Number(req.params.id))
       .then(handleSuccess(res))
-      .catch(handleError(res))
+      .catch(handlePrismaErrors(req, res))
   })
 
   // Create Many

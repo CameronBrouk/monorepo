@@ -1,4 +1,20 @@
+import { Express } from 'express'
 import { isEmpty } from 'ramda'
+
+export const logExpressRoutes = (app: Express) => {
+  console.log(
+    // onlyPopulatedValues(
+    app._router.stack
+      .map(
+        (d: any) =>
+          `${Object.keys(d?.route?.methods || {})[0]?.toUpperCase()}:  ${
+            d?.route?.path
+          }`
+      )
+      .filter((item) => !item.includes('undefined'))
+  )
+  // )
+}
 
 export const logObj = (name: string, object?: any) => {
   if (!object) return

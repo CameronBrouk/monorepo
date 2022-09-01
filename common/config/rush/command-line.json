@@ -44,6 +44,17 @@
       "enableParallelism": true,
       "safeForSimultaneousRushProcesses": true
     },
+  {
+      "commandKind": "bulk",
+      "name": "serve:stlswing:backend",
+      "summary": "starts dev server for the backend backages related to stl swing ",
+      "description": "Run through each directory and run the required serve command",
+      "allowWarningsInSuccessfulBuild": true,
+      "ignoreMissingScript": true,
+      "ignoreDependencyOrder": false,
+      "enableParallelism": true,
+      "safeForSimultaneousRushProcesses": true
+    },
     {
       "name": "lint-staged",
       "commandKind": "global",
@@ -51,6 +62,12 @@
       "autoinstallerName": "rush-lint-staged",
       // This will invoke common/autoinstallers/rush-lint-staged/node_modules/.bin/lint-staged
       "shellCommand": "lint-staged"
+    },
+    {
+      "commandKind": "global",
+      "name": "lol",
+      "summary": "",
+      "shellCommand": "common/scripts/start-stlswing.sh"
     },
     {
       /**

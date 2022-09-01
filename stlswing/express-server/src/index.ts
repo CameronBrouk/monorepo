@@ -1,34 +1,34 @@
-import { makeCrudEndpoints } from '@unimpaired/backend'
-import { PrismaClient } from '@prisma/client'
-import express from 'express'
-import { userPayload } from './tables/User/User.js'
+import { PrismaClient } from '@stlswing/database'
+import {
+  generateApi,
+  logExpressRoutes,
+  makeCrudEndpoints
+} from '@unimpaired/backend'
+import groupClassApi from './GroupClass/groupClass.api.js'
+import { validateGroupClass } from './GroupClass/groupClass.validators.js'
+import express, { Express } from 'express'
+import socialDanceApi from './SocialDance/social-dance.api.js'
+import { validateSocialDance } from './SocialDance/socialDance.validator.js'
 
-export type TableNames = 'todo' | 'todoList' | 'person' | 'user' | 'permission'
+export const prisma = new PrismaClient()
 
-// Express and Prisma Assignment
-export const prisma = new PrismaClient({
-  log: [
-    'query',
-    { level: 'warn', emit: 'stdout' },
-    { level: 'info', emit: 'stdout' },
-    { level: 'error', emit: 'event' }
-  ],
-  rejectOnNotFound: true
-})
-const app = express()
+export const app: Express = express()
 
-// Express Server Config
 app.use(express.json())
 
-// API Endpoints
-makeCrudEndpoints('todo', app, prisma)
-makeCrudEndpoints('todoList', app, prisma)
-makeCrudEndpoints('person', app, prisma)
-makeCrudEndpoints('user', app, prisma, {
-  zod: userPayload
+app.listen(4000, () => {
+  console.log('==== App Has Started ====')
 })
 
-// Run Server
-app.listen(4000, () => {
-  console.log('App Has Started')
-})
+// Expanded API's w/ Nested updates/creates
+generateApi(app, 'GroupClass', groupClassApi, validateGroupClass)
+generateApi(app, 'SocialDance', socialDanceApi, validateSocialDance)
+// Generic Crud Endpoints
+makeCrudEndpoints('DanceMove', app, prisma)
+makeCrudEndpoints('Teacher', app, prisma)
+makeCrudEndpoints('Product', app, prisma)
+makeCrudEndpoints('Ticket', app, prisma)
+makeCrudEndpoints('Order', app, prisma)
+makeCrudEndpoints('PrivateLesson', app, prisma)
+
+logExpressRoutes(app)

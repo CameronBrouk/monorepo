@@ -1,0 +1,50 @@
+{
+  "name": "@stlswing/database",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Cameron Brouk",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "prisma generate && tsc",
+    "start": "tsc --watch",
+    "serve:dev": "pm2 --name stlswing:database start npm -- start",
+    "serve": "prisma generate && npm run serve:dev",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "serve:stlswing": "npm run serve:dev",
+    "serve:stlswing:backend": "npm run serve:dev"
+  },
+  "dependencies": {
+    "@prisma/client": "~4.3.0",
+    "zod": "~3.17.3",
+    "@unimpaired/backend": "~1.0.0",
+    "@unimpaired/utils": "~1.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "~8.4.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "~4.0.0",
+    "eslint-plugin-unused-imports": "~2.0.0",
+    "my-toolchain": "^1.0.0",
+    "ts-node": "~10.8.1",
+    "nodemon": "~2.0.16",
+    "prisma": "~4.3.0",
+    "@types/ramda": "~0.28.14",
+    "@types/node": "^10.9.4",
+    "@types/express": "~4.17.13",
+    "typescript": "^4.5.4",
+    "ts-node-dev": "~2.0.0",
+    "@types/body-parser": "~1.19.2",
+    "faker": "~6.6.6"
+  },
+  "peerDependencies": {
+    "node-notifier": "~10.0.1",
+    "webpack": "^2.0.0"
+  }
+}
