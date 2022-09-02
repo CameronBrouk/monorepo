@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@unimpaired/interfaces",
+      "comment": "First Publish",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@unimpaired/interfaces",
+  "email": "cameronbrouk@gmail.com"
+}

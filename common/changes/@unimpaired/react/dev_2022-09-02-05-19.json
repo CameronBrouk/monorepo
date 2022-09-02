@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@unimpaired/react",
+      "comment": "Testing Publish",
+      "type": "major"
+    }
+  ],
+  "packageName": "@unimpaired/react",
+  "email": "cameronbrouk@gmail.com"
+}
