@@ -387,6 +387,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "node-fetch",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "node-notifier",
       "allowedCategories": [ "production" ]
     },

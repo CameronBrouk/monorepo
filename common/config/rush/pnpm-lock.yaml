@@ -26,13 +26,12 @@ specifiers:
   '@types/body-parser': ~1.19.2
   '@types/express': ~4.17.13
   '@types/jest': ~28.1.2
-  '@types/lodash': ~4.14.182
   '@types/node': ^10.9.4
   '@types/ramda': ~0.28.14
   '@types/react': ~18.0.14
   '@types/react-dom': ~18.0.5
-  '@types/supertest': ~2.0.12
   '@types/swagger-jsdoc': ~6.0.1
+  '@types/swagger-ui-express': ~4.1.3
   '@types/testing-library__jest-dom': ~5.14.2
   '@typescript-eslint/eslint-plugin': ^5.28.0
   '@typescript-eslint/parser': ^5.28.0
@@ -45,6 +44,7 @@ specifiers:
   colors: ^1.3.2
   cssnano: ~5.0.17
   date-fns: ~2.28.0
+  dotenv: ~16.0.2
   eslint: ^8.9.0
   eslint-config-airbnb: ^19.0.4
   eslint-config-prettier: ~8.4.0
@@ -70,6 +70,7 @@ specifiers:
   jest-watch-typeahead: ~1.1.0
   jose: ~4.8.1
   mockdate: ~3.0.5
+  node-fetch: ~3.2.10
   node-notifier: ~10.0.1
   nodemon: ~2.0.16
   observable-hooks: ~4.2.0
@@ -95,7 +96,6 @@ specifiers:
   rrule: ~2.7.1
   rxjs: ~7.5.5
   source-map-explorer: ~2.5.2
-  supertest: ~6.2.4
   swagger-jsdoc: ~6.2.5
   swagger-ui-express: ~4.5.0
   tailwindcss: ~3.0.23
@@ -135,13 +135,12 @@ dependencies:
   '@types/body-parser': 1.19.2
   '@types/express': 4.17.13
   '@types/jest': 28.1.3
-  '@types/lodash': 4.14.182
   '@types/node': 10.17.60
   '@types/ramda': 0.28.14
   '@types/react': 18.0.14
   '@types/react-dom': 18.0.5
-  '@types/supertest': 2.0.12
   '@types/swagger-jsdoc': 6.0.1
+  '@types/swagger-ui-express': 4.1.3
   '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.30.0_eb27092288e495ddbd8abfd1fa139db3
   '@typescript-eslint/parser': 5.30.0_eslint@8.18.0+typescript@4.7.4
@@ -154,6 +153,7 @@ dependencies:
   colors: 1.4.0
   cssnano: 5.0.17_postcss@8.4.14
   date-fns: 2.28.0
+  dotenv: 16.0.2
   eslint: 8.18.0
   eslint-config-airbnb: 19.0.4_2180c90403a8bcea9ae4ee2f48a74202
   eslint-config-prettier: 8.4.0_eslint@8.18.0
@@ -179,6 +179,7 @@ dependencies:
   jest-watch-typeahead: 1.1.0_jest@28.1.1
   jose: 4.8.1
   mockdate: 3.0.5
+  node-fetch: 3.2.10
   node-notifier: 10.0.1
   nodemon: 2.0.18
   observable-hooks: 4.2.0_d6a10002b98add6645e39e19d5d15b0d
@@ -204,7 +205,6 @@ dependencies:
   rrule: 2.7.1
   rxjs: 7.5.5
   source-map-explorer: 2.5.2
-  supertest: 6.2.4
   swagger-jsdoc: 6.2.5_openapi-types@12.0.0
   swagger-ui-express: 4.5.0_express@4.18.1
   tailwindcss: 3.0.24_ts-node@10.8.1
@@ -4380,6 +4380,25 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
+  /c8/7.12.0:
+    resolution: {integrity: sha512-CtgQrHOkyxr5koX1wEUmN/5cfDa2ckbHRA4Gy5LAL0zaCFtVWJS5++n+w4/sr2GWGerBxgTjpKeDclk/Qk6W/A==}
+    engines: {node: '>=10.12.0'}
+    hasBin: true
+    dependencies:
+      '@bcoe/v8-coverage': 0.2.3
+      '@istanbuljs/schema': 0.1.3
+      find-up: 5.0.0
+      foreground-child: 2.0.0
+      istanbul-lib-coverage: 3.2.0
+      istanbul-lib-report: 3.0.0
+      istanbul-reports: 3.1.4
+      rimraf: 3.0.2
+      test-exclude: 6.0.0
+      v8-to-istanbul: 9.0.1
+      yargs: 16.2.0
+      yargs-parser: 20.2.9
+    dev: false
+
   /cache-base/1.0.1:
     resolution: {integrity: sha512-AKcdTnFSWATd5/GCPRxr2ChwIJ85CeyrEyjRHlKxQ56d4XJMGym0uAiKn0xbLOGOl3+yRpOTi484dVCEc5AUzQ==}
     engines: {node: '>=0.10.0'}
@@ -5130,6 +5149,11 @@ packages:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: false
 
+  /data-uri-to-buffer/4.0.0:
+    resolution: {integrity: sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==}
+    engines: {node: '>= 12'}
+    dev: false
+
   /date-fns/2.28.0:
     resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
     engines: {node: '>=0.11'}
@@ -5434,6 +5458,11 @@ packages:
   /dotenv/10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /dotenv/16.0.2:
+    resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
+    engines: {node: '>=12'}
     dev: false
 
   /duplexer/0.1.2:
@@ -6383,6 +6412,14 @@ packages:
       bser: 2.1.1
     dev: false
 
+  /fetch-blob/3.2.0:
+    resolution: {integrity: sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ==}
+    engines: {node: ^12.20 || >= 14.13}
+    dependencies:
+      node-domexception: 1.0.0
+      web-streams-polyfill: 3.2.1
+    dev: false
+
   /file-entry-cache/6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -6583,6 +6620,14 @@ packages:
     dev: false
     optional: true
 
+  /foreground-child/2.0.0:
+    resolution: {integrity: sha512-dCIq9FpEcyQyXKCkyzmlPTFNgrCzPudOe+mhvJU5zAtlBnGVy2yKxtfsxK2tQBThwq225jcvBjpw1Gr40uzZCA==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      cross-spawn: 7.0.3
+      signal-exit: 3.0.7
+    dev: false
+
   /form-data/2.5.1:
     resolution: {integrity: sha512-m21N3WOmEEURgk6B9GLOE4RuWOFf28Lhh9qGYeNlGq4VDXUlJy2th2slBNU8Gp8EzloYZOibZJ7t5ecIrFSjVA==}
     engines: {node: '>= 0.12'}
@@ -6599,6 +6644,13 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
+    dev: false
+
+  /formdata-polyfill/4.0.10:
+    resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
+    engines: {node: '>=12.20.0'}
+    dependencies:
+      fetch-blob: 3.2.0
     dev: false
 
   /formidable/2.0.1:
@@ -8864,6 +8916,11 @@ packages:
     resolution: {integrity: sha512-qN8v/s2PAJwGUtr1/hYTpNKlD6Y9rc4p8KSmJXyGdYGZsDGKXrGThikLFP9OCHFeLeEpQzPwiAtdIvBLqm//Hw==}
     dev: false
 
+  /node-domexception/1.0.0:
+    resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
+    engines: {node: '>=10.5.0'}
+    dev: false
+
   /node-fetch/2.6.1:
     resolution: {integrity: sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==}
     engines: {node: 4.x || >=6.0.0}
@@ -8879,6 +8936,15 @@ packages:
         optional: true
     dependencies:
       whatwg-url: 5.0.0
+    dev: false
+
+  /node-fetch/3.2.10:
+    resolution: {integrity: sha512-MhuzNwdURnZ1Cp4XTazr69K0BTizsBroX7Zx3UgDSVcZYKF/6p0CBe4EUb/hLqmzVhl0UpYfgRljQ4yxE+iCxA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      data-uri-to-buffer: 4.0.0
+      fetch-blob: 3.2.0
+      formdata-polyfill: 4.0.10
     dev: false
 
   /node-int64/0.4.0:
@@ -12122,6 +12188,40 @@ packages:
       fsevents: 2.3.2
     dev: false
 
+  /vitest/0.5.9_c8@7.12.0+happy-dom@2.41.0:
+    resolution: {integrity: sha512-R8lRP9Q1yIbwr8pDf2gvw4PFe8H5YMyHhBcdyfnUh6toLfCR10jrdI/WkNxdo5I4H/9XrMX9t+SAavdJExNdKg==}
+    engines: {node: '>=14.14.0'}
+    hasBin: true
+    peerDependencies:
+      '@vitest/ui': '*'
+      c8: '*'
+      happy-dom: '*'
+      jsdom: '*'
+    peerDependenciesMeta:
+      '@vitest/ui':
+        optional: true
+      c8:
+        optional: true
+      happy-dom:
+        optional: true
+      jsdom:
+        optional: true
+    dependencies:
+      '@types/chai': 4.3.1
+      '@types/chai-subset': 1.3.3
+      c8: 7.12.0
+      chai: 4.3.6
+      happy-dom: 2.41.0
+      local-pkg: 0.4.1
+      tinypool: 0.1.3
+      tinyspy: 0.3.3
+      vite: 2.9.13
+    transitivePeerDependencies:
+      - less
+      - sass
+      - stylus
+    dev: false
+
   /vitest/0.5.9_happy-dom@2.41.0:
     resolution: {integrity: sha512-R8lRP9Q1yIbwr8pDf2gvw4PFe8H5YMyHhBcdyfnUh6toLfCR10jrdI/WkNxdo5I4H/9XrMX9t+SAavdJExNdKg==}
     engines: {node: '>=14.14.0'}
@@ -12180,6 +12280,11 @@ packages:
     optionalDependencies:
       chokidar: 3.5.3
       watchpack-chokidar2: 2.0.1
+    dev: false
+
+  /web-streams-polyfill/3.2.1:
+    resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
+    engines: {node: '>= 8'}
     dev: false
 
   /webidl-conversions/3.0.1:
@@ -12611,7 +12716,7 @@ packages:
     dev: false
 
   file:projects/express-server.tgz_c2f3d52634122bd0cc8ba8f3866fbdfc:
-    resolution: {integrity: sha512-je+DPPQdwwjO4zWWclNmovQKt9p5B8zZqkAx7gny2o2qzsp/lBiUlz7I2nqXjHzY4YbK+3DuFHuJV1M0jzV5DA==, tarball: file:projects/express-server.tgz}
+    resolution: {integrity: sha512-TO0zRW6KI5AOff24NykFs1JPiL5NiCNZncbNtNKbzAJGjEklQOFl+QPipmPjNN4cn46ZR5+K5nhy+EsTUspZ9w==, tarball: file:projects/express-server.tgz}
     id: file:projects/express-server.tgz
     name: '@rush-temp/express-server'
     version: 0.0.0
@@ -12633,7 +12738,9 @@ packages:
       '@typescript-eslint/parser': 5.30.0_eslint@8.18.0+typescript@4.7.4
       babel-jest: 27.5.1_@babel+core@7.18.6
       babel-loader: 8.2.5_@babel+core@7.18.6+webpack@2.7.0
+      c8: 7.12.0
       change-case: 4.1.2
+      dotenv: 16.0.2
       eslint: 8.18.0
       eslint-config-airbnb: 19.0.4_2180c90403a8bcea9ae4ee2f48a74202
       eslint-config-prettier: 8.4.0_eslint@8.18.0
@@ -12645,6 +12752,7 @@ packages:
       jest: 28.1.1_9c8a1a2b9757b507576b70422952e93e
       jest-watch-typeahead: 1.1.0_jest@28.1.1
       jose: 4.8.1
+      node-fetch: 3.2.10
       node-notifier: 10.0.1
       nodemon: 2.0.18
       openapi-types: 12.0.0
@@ -12658,14 +12766,13 @@ packages:
       ts-node: 10.8.1_c59db064b1465442ee072998ff39bc2c
       ts-node-dev: 2.0.0_f4cd7b991227ad7668d5049b9d2ac65b
       typescript: 4.7.4
-      vitest: 0.5.9_happy-dom@2.41.0
+      vitest: 0.5.9_c8@7.12.0+happy-dom@2.41.0
       webpack: 2.7.0
       zod: 3.17.3
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
       - '@vitest/ui'
-      - c8
       - eslint-plugin-jsx-a11y
       - eslint-plugin-react
       - eslint-plugin-react-hooks
