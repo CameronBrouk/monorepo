@@ -9,15 +9,18 @@ import { validateGroupClass } from './GroupClass/groupClass.validators.js'
 import express, { Express } from 'express'
 import socialDanceApi from './SocialDance/social-dance.api.js'
 import { validateSocialDance } from './SocialDance/socialDance.validator.js'
+import { environment } from './environment.js'
 
 export const prisma = new PrismaClient()
-
 export const app: Express = express()
 
+console.log(environment)
 app.use(express.json())
 
-app.listen(4000, () => {
-  console.log('==== App Has Started ====')
+app.listen(environment.PORT, () => {
+  console.log(
+    `==== App Has Started on port ${environment.PORT} in ${environment.NODE_ENV} ====`
+  )
 })
 
 // Expanded API's w/ Nested updates/creates
