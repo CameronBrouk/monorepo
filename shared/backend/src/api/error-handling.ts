@@ -21,6 +21,18 @@ export type ErrorResponse = {
 
 export const getZodError = (zodError: ZodError) => ({
   ...badRequestBody,
+  description: zodError.issues
+    .map(
+      (issue) =>
+        `The ${issue.path[0] || 'unknown'} property is ${
+          issue.message
+          // @ts-ignore
+        }(expected ${issue?.expected || 'unkown'}, recieved ${
+          // @ts-ignore
+          issue?.received || 'unkown'
+        })`
+    )
+    .join(' and, '),
   meta: zodError
 })
 

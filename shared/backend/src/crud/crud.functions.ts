@@ -46,9 +46,10 @@ export const createOne =
       .catch(handlePrismaErrors(req, res))
   }
 
+type Dict = Record<string, any>
 export const updateOne =
   (
-    prismaUpdate: <Body>(id: number, body: Body) => Promise<any>,
+    prismaUpdate: <Body extends Dict>(id: number, body: Body) => Promise<Dict>,
     zodValidator: ZodObject<any>
   ) =>
   (req: Request, res: Response) => {

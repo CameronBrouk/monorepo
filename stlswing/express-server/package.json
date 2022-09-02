@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "start": "nodemon src/index.ts",
+    "start": "nodemon dist/index.js",
     "serve:dev": "pm2 --name stlswing:express-server start npm -- start",
     "log:dev": "pm2 log backend:dev",
     "serve:types": "pm2 --name stlswing:express-server:types start npm -- run build:watch",
@@ -17,6 +17,7 @@
     "serve": "npm run serve:dev && npm run serve:types",
     "stop": "pm2 stop Backend",
     "test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "serve:stlswing": "npm run serve:dev",
     "serve:stlswing:backend": "npm run serve:dev"
   },
@@ -30,7 +31,9 @@
     "@unimpaired/utils": "~1.0.0",
     "@stlswing/database": "~1.0.0",
     "rrule": "~2.7.1",
-    "change-case": "~4.1.2"
+    "change-case": "~4.1.2",
+    "dotenv": "~16.0.2",
+    "node-fetch": "~3.2.10"
   },
   "devDependencies": {
     "vitest": "~0.5.7",
@@ -59,7 +62,8 @@
     "swagger-ui-express": "~4.5.0",
     "swagger-jsdoc": "~6.2.5",
     "@types/swagger-jsdoc": "~6.0.1",
-    "@types/swagger-ui-express": "~4.1.3"
+    "@types/swagger-ui-express": "~4.1.3",
+    "c8": "~7.12.0"
   },
   "peerDependencies": {
     "node-notifier": "~10.0.1",

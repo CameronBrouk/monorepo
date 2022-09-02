@@ -66,7 +66,7 @@ export const hasValidBody = (
   if (validation.success) return true
   const error = {
     ...badRequestBody,
-    meta: validation.error
+    ...getZodError(validation.error)
   }
   res.status(400).json(error)
   return false
