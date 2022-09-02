@@ -19,8 +19,8 @@
   "dependencies": {
     "@prisma/client": "~4.3.0",
     "zod": "~3.17.3",
-    "@unimpaired/backend": "~1.0.0",
-    "@unimpaired/utils": "~1.0.0"
+    "@unimpaired/backend": "~1.0.1",
+    "@unimpaired/utils": "~1.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.28.0",
