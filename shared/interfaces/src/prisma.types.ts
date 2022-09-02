@@ -50,3 +50,17 @@ export type QueryOptions<T extends Record<any, any>> = {
 }
 
 export type OmitDefaults<T> = Omit<T, keyof TableDefaults>
+
+export type RemovePromise<T> = T extends Promise<infer U> ? U : never
+export type RemoveNullKeys<T extends Record<string, any>> = {
+  [K in keyof T as T[K] extends NonNullable<T[K]> ? K : never]: T[K]
+}
+export type GetNullKeysAsOptional<T extends Record<string, any>> = {
+  [K in keyof T as T[K] extends NonNullable<T[K]> ? never : K]?: T[K]
+}
+export type MakeNullOptional<T extends Record<string, any>> =
+  RemoveNullKeys<T> & GetNullKeysAsOptional<T>
+export type RecursiveMakeNullOptional<T extends Record<string, any>> =
+  MakeNullOptional<{
+    [K in keyof T]: T[K] extends object ? RecursiveMakeNullOptional<T[K]> : T[K]
+  }>
