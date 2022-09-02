@@ -1,0 +1,17 @@
+{
+  "name": "@unimpaired/interfaces",
+  "entries": [
+    {
+      "version": "1.0.1",
+      "tag": "@unimpaired/interfaces_v1.0.1",
+      "date": "Fri, 02 Sep 2022 05:34:03 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "First Publish"
+          }
+        ]
+      }
+    }
+  ]
+}
