@@ -1,6 +1,13 @@
 # Change Log - @unimpaired/react
 
-This log was last generated on Fri, 19 Aug 2022 15:54:40 GMT and should not be manually modified.
+This log was last generated on Fri, 02 Sep 2022 05:41:43 GMT and should not be manually modified.
+
+## 2.0.0
+Fri, 02 Sep 2022 05:41:43 GMT
+
+### Breaking changes
+
+- Testing Publish
 
 ## 1.0.5
 Fri, 19 Aug 2022 15:54:40 GMT
