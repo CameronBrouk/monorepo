@@ -1,6 +1,6 @@
 {
   "name": "@unimpaired/backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "Cameron Brouk",
   "license": "ISC",
@@ -28,8 +28,8 @@
   },
   "devDependencies": {
     "@prisma/client": "~4.3.0",
-    "@unimpaired/interfaces": "~1.0.0",
-    "@unimpaired/utils": "~1.0.0",
+    "@unimpaired/interfaces": "~1.0.1",
+    "@unimpaired/utils": "~1.0.1",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",
