@@ -30,17 +30,20 @@
     {
       "packageName": "@unimpaired/backend",
       "projectFolder": "shared/backend",
-      "reviewCategory": "production"
+      "reviewCategory": "production",
+      "shouldPublish": true
     },
     {
       "packageName": "@unimpaired/interfaces",
       "projectFolder": "shared/interfaces",
-      "reviewCategory": "production"
+      "reviewCategory": "production",
+      "shouldPublish": true
     },
     {
       "packageName": "@unimpaired/utils",
       "projectFolder": "shared/utils",
-      "reviewCategory": "production"
+      "reviewCategory": "production",
+      "shouldPublish": true
     },
     {
       "packageName": "@unimpaired/react",
