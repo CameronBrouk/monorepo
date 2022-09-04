@@ -1,0 +1,28 @@
+{
+  "name": "@stlswing/database",
+  "entries": [
+    {
+      "version": "2.0.0",
+      "tag": "@stlswing/database_v2.0.0",
+      "date": "Sun, 04 Sep 2022 23:56:50 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Update to be a pure esmodule package"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@unimpaired/backend\" from `~1.0.2` to `~2.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@unimpaired/utils\" from `~1.0.2` to `~2.0.0`"
+          },
+          {
+            "comment": "Updating dependency \"@unimpaired/toolchain\" from `^1.0.1` to `^2.0.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -2,6 +2,18 @@
   "name": "@unimpaired/toolchain",
   "entries": [
     {
+      "version": "2.0.0",
+      "tag": "@unimpaired/toolchain_v2.0.0",
+      "date": "Sun, 04 Sep 2022 23:56:50 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Update tsconfig to support pure esmodule packages"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.1",
       "tag": "@unimpaired/toolchain_v1.0.1",
       "date": "Sun, 04 Sep 2022 01:37:56 GMT",

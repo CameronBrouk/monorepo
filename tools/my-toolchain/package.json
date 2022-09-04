@@ -1,6 +1,6 @@
 {
   "name": "@unimpaired/toolchain",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "This toolchain includes a tslint config that is used to build my esmodule libraries",
   "license": "MIT",
   "bin": {

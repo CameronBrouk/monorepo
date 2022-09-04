@@ -2,6 +2,18 @@
   "name": "@unimpaired/interfaces",
   "entries": [
     {
+      "version": "1.0.3",
+      "tag": "@unimpaired/interfaces_v1.0.3",
+      "date": "Sun, 04 Sep 2022 23:56:50 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@unimpaired/toolchain\" from `^1.0.1` to `^2.0.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.2",
       "tag": "@unimpaired/interfaces_v1.0.2",
       "date": "Sun, 04 Sep 2022 01:37:56 GMT",
