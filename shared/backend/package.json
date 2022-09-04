@@ -1,6 +1,6 @@
 {
   "name": "@unimpaired/backend",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "Cameron Brouk",
   "license": "ISC",
@@ -29,8 +29,8 @@
   },
   "devDependencies": {
     "@prisma/client": "~4.3.0",
-    "@unimpaired/interfaces": "~1.0.1",
-    "@unimpaired/utils": "~1.0.1",
+    "@unimpaired/interfaces": "~1.0.2",
+    "@unimpaired/utils": "~1.0.2",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",
@@ -47,7 +47,7 @@
     "babel-jest": "~27.5.1",
     "babel-loader": "^8.2.3",
     "jest-watch-typeahead": "~1.1.0",
-    "@unimpaired/toolchain": "^1.0.0",
+    "@unimpaired/toolchain": "^1.0.1",
     "ts-node": "~10.8.1",
     "nodemon": "~2.0.16",
     "prisma": "~4.3.0",

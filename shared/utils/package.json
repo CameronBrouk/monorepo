@@ -1,6 +1,6 @@
 {
   "name": "@unimpaired/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -27,7 +27,7 @@
     "babel-jest": "~27.5.1",
     "babel-loader": "^8.2.3",
     "jest-watch-typeahead": "~1.1.0",
-    "@unimpaired/toolchain": "^1.0.0",
+    "@unimpaired/toolchain": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",

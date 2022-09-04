@@ -126,7 +126,7 @@ dependencies:
   '@rush-temp/express-server': file:projects/express-server.tgz_c2f3d52634122bd0cc8ba8f3866fbdfc
   '@rush-temp/interfaces': file:projects/interfaces.tgz_633ec429ce7594dcf641e0025ef51710
   '@rush-temp/react': file:projects/react.tgz_c8@7.12.0+ts-node@10.8.1
-  '@rush-temp/toolchain': file:projects/toolchain.tgz
+  '@rush-temp/toolchain': file:projects/toolchain.tgz_5e1138eee0ca5812d9e4dd44429416b2
   '@rush-temp/utils': file:projects/utils.tgz_b5c4f562039e8670fbde037747197442
   '@rush-temp/website-rebuild': file:projects/website-rebuild.tgz_c8@7.12.0+ts-node@10.8.1
   '@testing-library/dom': 8.11.4
@@ -12850,15 +12850,30 @@ packages:
       - ts-node
     dev: false
 
-  file:projects/toolchain.tgz:
-    resolution: {integrity: sha512-LbzrgPxVO0yU58Urug4O8voPsISVWFpE3sO+qVZMoHynrHC7061UHaHxOP4DODNczKO6E7UCL3TIy2U6NXsFWQ==, tarball: file:projects/toolchain.tgz}
+  file:projects/toolchain.tgz_5e1138eee0ca5812d9e4dd44429416b2:
+    resolution: {integrity: sha512-SbWPOvTBcyasWCTyS7xHJrRc7B7+Ccu6+8VNnlIjkRNVdemmVko2ClCu688LfshBe0ekYI4l3J7gceiCvaTVZg==, tarball: file:projects/toolchain.tgz}
+    id: file:projects/toolchain.tgz
     name: '@rush-temp/toolchain'
     version: 0.0.0
     dependencies:
       '@types/node': 10.17.60
+      '@typescript-eslint/eslint-plugin': 5.30.0_eb27092288e495ddbd8abfd1fa139db3
+      '@typescript-eslint/parser': 5.30.0_eslint@8.18.0+typescript@4.7.4
       colors: 1.4.0
+      eslint: 8.18.0
+      eslint-config-airbnb: 19.0.4_2180c90403a8bcea9ae4ee2f48a74202
+      eslint-config-prettier: 8.4.0_eslint@8.18.0
+      eslint-plugin-import: 2.26.0_eslint@8.18.0
+      eslint-plugin-prettier: 4.0.0_5c724b898d3fc44979ce4ccd82e1dc55
+      eslint-plugin-unused-imports: 2.0.0_1e964a6145de49d333e5e8bea88c9672
       rimraf: 2.7.1
       typescript: 4.7.4
+    transitivePeerDependencies:
+      - eslint-plugin-jsx-a11y
+      - eslint-plugin-react
+      - eslint-plugin-react-hooks
+      - prettier
+      - supports-color
     dev: false
 
   file:projects/utils.tgz_b5c4f562039e8670fbde037747197442:

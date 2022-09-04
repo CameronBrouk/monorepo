@@ -52,8 +52,8 @@
     "react-toastify": "^9.0.5",
     "react-use-measure": "~2.1.1",
     "rxjs": "~7.5.5",
-    "@unimpaired/utils": "~1.0.1",
-    "@unimpaired/react": "~2.0.0"
+    "@unimpaired/utils": "~1.0.2",
+    "@unimpaired/react": "~2.0.1"
   },
   "devDependencies": {
     "@types/ramda": "~0.28.14",

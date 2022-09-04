@@ -20,8 +20,8 @@
   "dependencies": {
     "@prisma/client": "~4.3.0",
     "zod": "~3.17.3",
-    "@unimpaired/backend": "~1.0.1",
-    "@unimpaired/utils": "~1.0.1"
+    "@unimpaired/backend": "~1.0.2",
+    "@unimpaired/utils": "~1.0.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.28.0",
@@ -32,7 +32,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "~4.0.0",
     "eslint-plugin-unused-imports": "~2.0.0",
-    "@unimpaired/toolchain": "^1.0.0",
+    "@unimpaired/toolchain": "^1.0.1",
     "ts-node": "~10.8.1",
     "nodemon": "~2.0.16",
     "prisma": "~4.3.0",
