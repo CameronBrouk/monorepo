@@ -1,7 +1,7 @@
 {
   "name": "@unimpaired/toolchain",
   "version": "1.0.1",
-  "description": "An example toolchain used to build projects in this repo",
+  "description": "This toolchain includes a tslint config that is used to build my esmodule libraries",
   "license": "MIT",
   "bin": {
     "my-build": "bin/my-build.js",

@@ -1,7 +1,7 @@
 {
   "name": "@stlswing/express-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "This application acts as the server for the STL Swing relational database",
   "author": "Cameron Brouk",
   "license": "ISC",
   "type": "module",

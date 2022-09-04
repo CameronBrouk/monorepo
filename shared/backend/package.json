@@ -1,7 +1,7 @@
 {
   "name": "@unimpaired/backend",
   "version": "1.0.2",
-  "description": "",
+  "description": "This package includes utility functions for express backends",
   "author": "Cameron Brouk",
   "license": "ISC",
   "type": "module",
