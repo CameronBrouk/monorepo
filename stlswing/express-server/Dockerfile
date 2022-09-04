@@ -12,4 +12,4 @@ RUN npm install
 
 COPY . .
 # CMD: run script npm start after the image is built.
-CMD npm run start
+CMD npm run build && npm run start
