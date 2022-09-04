@@ -71,6 +71,7 @@ export function Radio<T extends PossibleValue = string>({
           />
         ))}
       </div>
+      {/* @ts-ignore >> error after typescript 4.8 upgrade? */}
       {props.form.formState.errors[props.name]?.type === 'required' && (
         <p className='pl-2 text-red-400'>please select an option</p>
       )}

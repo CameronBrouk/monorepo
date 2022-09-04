@@ -1,9 +1,8 @@
 import { z } from 'zod'
 
-export type GroupClassPayload = z.infer<typeof validateGroupClass>
 export const validateGroupClass = z.object({
-  start: z.string().transform((d) => new Date(d)),
-  end: z.string().transform((d) => new Date(d)),
+  start: z.date(),
+  end: z.date(),
   recurrence: z.string().optional(),
   description: z.string(),
   name: z.string(),
@@ -16,3 +15,15 @@ export const validateGroupClass = z.object({
   teacherIds: z.array(z.number()).optional(),
   assetIds: z.array(z.number()).optional()
 })
+
+// Note:  the recurrence property is how you define if a class has multiple dates
+export interface GroupClassPayload extends z.infer<typeof validateGroupClass> {
+  start: Date // The time the dance starts
+  end: Date // The time the class ends
+  description: string
+  name: string
+  location: string
+  danceType: string
+  difficultyLevel: string
+  stripeProductId: number
+}

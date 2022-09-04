@@ -1,7 +1,7 @@
 import { SocialDance } from '@stlswing/database'
 import { getPrismaQueryParamFilters, QueryParams } from '@unimpaired/backend'
+import { WhereFilters } from '@unimpaired/interfaces'
 import { prisma } from '../../index.js'
-import { WhereFilters } from '../../../../../shared/interfaces/lib/prisma.types.js'
 
 export const lazyListSocialDances = async (
   queryParams: QueryParams,
@@ -9,11 +9,11 @@ export const lazyListSocialDances = async (
 ) => {
   const params = getPrismaQueryParamFilters(queryParams)
   return prisma.socialDance.findMany({
-    ...params,
-    where: {
-      ...(params?.where || {}),
-      ...(where || {})
-    },
+    // ...params,
+    // where: {
+    //   ...(params?.where || {}),
+    //   ...(where || {})
+    // },
     include: {
       _count: {
         select: {
@@ -30,11 +30,11 @@ export const eagerListSocialDances = async (
 ) => {
   const params = getPrismaQueryParamFilters(queryParams)
   return prisma.socialDance.findMany({
-    ...params,
-    where: {
-      ...params?.where,
-      ...where
-    },
+    // ...params,
+    // where: {
+    //   ...params?.where,
+    //   ...where
+    // },
     include: {
       createdBy: true,
       updatedBy: true,

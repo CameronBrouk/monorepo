@@ -1,8 +1,8 @@
 import { camelCase, snakeCase } from 'change-case'
 import { any, isEmpty, equals, pipe, without, reject, isNil } from 'ramda'
-export * from './search'
+export * from './search.js'
 import * as R from 'ramda'
-export * from './dates'
+export * from './dates.js'
 
 export const logHello = () => console.log('hello')
 

@@ -21,7 +21,7 @@ export const ModalHeader = ({ title, onClose, ...props }: ModalHeaderProps) => (
       {title}
     </h2>
     <button onClick={onClose} className={props.buttonClasses} type='button'>
-      <FontAwesomeIcon icon={faClose} className='text-red-800 w-8 h-8' />
+      <FontAwesomeIcon icon={'close'} className='text-red-800 w-8 h-8' />
     </button>
   </header>
 )

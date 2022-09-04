@@ -9,8 +9,6 @@ import {
 
 const zodValidateUrlLength = z.string().max(2048).optional()
 
-// const zodValidateQueryLength = z.string().max(1024).optional()
-
 const zodValidateIdParam = z
   .object({
     id: z.string()
@@ -20,7 +18,7 @@ const zodValidateIdParam = z
 const hasValidQueryId = (req: Request, res: Response) => {
   const validation = zodValidateIdParam.safeParse(req.params)
   if (validation.success) return true
-  res.status(400).json(getZodError(validation.error))
+  if ('error' in validation) res.status(400).json(getZodError(validation.error))
   return false
 }
 
@@ -48,7 +46,7 @@ const hasValidatedUrlLength = (req: Request, res: Response) => {
   const validation = zodValidateUrlLength.safeParse(req.url)
   if (validation.success) return true
   const error = {
-    ...getZodError(validation.error),
+    ...('error' in validation ? getZodError(validation.error) : {}),
     title: 'Request Query Issues',
     message: 'URL was too long.  It must be under 2048 characters'
   }
@@ -66,7 +64,7 @@ export const hasValidBody = (
   if (validation.success) return true
   const error = {
     ...badRequestBody,
-    ...getZodError(validation.error)
+    ...('error' in validation ? getZodError(validation.error) : {})
   }
   res.status(400).json(error)
   return false

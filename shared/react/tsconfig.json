@@ -9,6 +9,6 @@
     "allowUmdGlobalAccess": true,
     "emitDeclarationOnly": true,
     "target": "es5",
-    "jsx": "react-jsx"
+    "jsx": "react"
   }
 }

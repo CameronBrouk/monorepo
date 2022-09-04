@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "assumeChangesOnlyAffectDirectDependencies": true, // makes watching more effective/faster, but might miss issues that will show up during full build
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "target": "es2020",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "allowSyntheticDefaultImports": true, // allows support for importing legacy commonJS modules
+    // ESM doesn't yet support JSON modules
+    "resolveJsonModule": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "rootDir": "../../../../src",
+    "outDir": "../../../../dist"
+  },
+  // This is likely something to configure in the future, but might fuck up monorepo shit
+  // "watchOptions": {
+  //   "excludeDirectories": ["**/node_modules", "dist"]
+  // },
+  "include": ["../../../../src/**/*.ts"],
+  "exclude": [
+    "../../../../src/environment.ts",
+    "../../../../src/test-utils.ts",
+    "../../../../node_modules",
+    "../../../../lib",
+    "../../../../dist",
+    "../../../../types",
+    "../../../../src/*.spec.ts",
+    "../../../../src/**/*.spec.ts",
+    "../../../../src/**/*.mock.ts"
+  ]
+}

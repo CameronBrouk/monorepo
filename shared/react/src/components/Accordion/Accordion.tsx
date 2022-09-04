@@ -24,7 +24,6 @@ export const Accordion = ({ children, title, ...props }: AccordionProps) => {
   })
 
   const svgClasses = isOpen ? 'rotate-180' : 'rotate-0'
-  console.log('Test Rush Publish Workflow')
 
   return (
     <dl
@@ -41,7 +40,7 @@ export const Accordion = ({ children, title, ...props }: AccordionProps) => {
           <span className='h-7 flex items-center ml-6'>
             <div>
               <FontAwesomeIcon
-                icon={faChevronDown}
+                icon={'chevron-down'}
                 className={`${svgClasses}  transform transition-all duration-300`}
               />
             </div>

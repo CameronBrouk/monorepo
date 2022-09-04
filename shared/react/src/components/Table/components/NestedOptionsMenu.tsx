@@ -134,7 +134,9 @@ export const NestedOptionsMenu = ({ optionsTree, onSelect }: Props) => {
                   onClick={() => handleClickOption(item)}
                 >
                   <p className='w-56 text-left'>{item.label}</p>
-                  {!!item.children && <FontAwesomeIcon icon={faChevronRight} />}
+                  {!!item.children && (
+                    <FontAwesomeIcon icon={'chevron-right'} />
+                  )}
                   {!item.children && (
                     <input
                       id='offers'

@@ -35,7 +35,9 @@ export const OptionsPanel = ({ isVisible, setVisible, ...props }: Props) => {
             className=''
             type='button'
           >
-            <FontAwesomeIcon icon={fullHeight ? faChevronDown : faChevronUp} />
+            <FontAwesomeIcon
+              icon={fullHeight ? 'chevron-down' : 'chevron-up'}
+            />
           </button>
           <Button
             variant='raised'

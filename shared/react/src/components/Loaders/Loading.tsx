@@ -29,7 +29,6 @@ export const Loading = ({ className, color }: LoadingProps) => {
         <circle
           cx='50'
           cy='50'
-          fill='none'
           stroke={getColor()}
           strokeWidth='10'
           r='35'

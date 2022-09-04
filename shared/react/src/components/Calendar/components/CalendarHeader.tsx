@@ -32,7 +32,7 @@ export const Header = ({ date, setDate, ...props }: Props) => {
             className='hover:bg-gray-200 h-full p-5'
             onClick={() => setSidebarVisible && setSidebarVisible((v) => !v)}
           >
-            <FontAwesomeIcon icon={sidebarVisible ? faTimes : faBars} />
+            <FontAwesomeIcon icon={sidebarVisible ? 'times' : 'bars'} />
           </button>
         )}
 
@@ -45,7 +45,7 @@ export const Header = ({ date, setDate, ...props }: Props) => {
           >
             <FontAwesomeIcon
               className='text-gray-600 transition cursor-pointer hover:scale-105'
-              icon={faChevronLeft}
+              icon={'chevron-left'}
             />
           </button>
 
@@ -63,7 +63,7 @@ export const Header = ({ date, setDate, ...props }: Props) => {
               </p>
               <FontAwesomeIcon
                 className='text-gray-600 transition cursor-pointer hover:scale-105'
-                icon={faCaretDown}
+                icon={'caret-down'}
               />
             </button>
           </div>
@@ -76,7 +76,7 @@ export const Header = ({ date, setDate, ...props }: Props) => {
           >
             <FontAwesomeIcon
               className='text-gray-600 transition cursor-pointer hover:scale-105'
-              icon={faChevronRight}
+              icon={'chevron-right'}
             />
           </button>
         </div>

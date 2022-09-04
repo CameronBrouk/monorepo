@@ -13,7 +13,6 @@ import React, { useState, useEffect } from 'react'
 import { useTransition, animated } from '@react-spring/web'
 import { Menu } from '../../Menu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 export type OptionNode<T = any> = {
   label: string
@@ -132,7 +131,9 @@ export const NestedOptionsMenu = ({ optionsTree, onSelect }: Props) => {
                   onClick={() => handleClickOption(item)}
                 >
                   <p className='w-56 text-left'>{item.label}</p>
-                  {!!item.children && <FontAwesomeIcon icon={faChevronRight} />}
+                  {!!item.children && (
+                    <FontAwesomeIcon icon={'chevron-right'} />
+                  )}
                   {!item.children && (
                     <input
                       id='offers'

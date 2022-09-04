@@ -1,19 +1,23 @@
 import { GroupClass } from '@stlswing/database'
 import { getPrismaQueryParamFilters, QueryParams } from '@unimpaired/backend'
 import { prisma } from '../../index.js'
-import { WhereFilters } from '../../../../../shared/interfaces/lib/prisma.types.js'
 import { prop, propEq } from 'ramda'
+import { WhereFilters } from '@unimpaired/interfaces'
 
 export const lazyListGroupClasses = async (
   queryParams: QueryParams,
-  where?: WhereFilters<GroupClass>
+  filters?: WhereFilters<GroupClass>
 ) => {
-  const params = getPrismaQueryParamFilters(queryParams)
+  const { where, cursor, orderBy, skip, take } =
+    getPrismaQueryParamFilters(queryParams)
   return prisma.groupClass.findMany({
-    ...params,
+    cursor,
+    orderBy,
+    skip,
+    take,
     where: {
-      ...(params?.where || {}),
-      ...(where || {})
+      ...where,
+      ...filters
     },
     include: {
       _count: {
@@ -29,13 +33,17 @@ export const lazyListGroupClasses = async (
 
 export const eagerListGroupClasses = async (
   queryParams: QueryParams,
-  where?: WhereFilters<GroupClass>
+  filters?: WhereFilters<GroupClass>
 ) => {
-  const params = getPrismaQueryParamFilters(queryParams)
+  const { where, cursor, orderBy, skip, take } =
+    getPrismaQueryParamFilters(queryParams)
   const groupClasses = await prisma.groupClass.findMany({
-    ...params,
+    cursor,
+    orderBy,
+    skip,
+    take,
     where: {
-      ...params?.where,
+      ...filters,
       ...where
     },
     include: {

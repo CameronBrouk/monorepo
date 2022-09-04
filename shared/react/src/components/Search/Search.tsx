@@ -44,7 +44,7 @@ export const Search = ({ onSearch, ...props }: Props) => {
         <div className='focus-within:text-gray-600 relative w-full text-gray-400'>
           <div className='absolute inset-y-0 left-0 flex items-center ml-2 pointer-events-none'>
             {(!loading || !props.debounce) && (
-              <FontAwesomeIcon icon={faSearch} />
+              <FontAwesomeIcon icon={'search'} />
             )}
             {loading && <Loading className='h-5 w-5 mt-2' color='purple' />}
           </div>

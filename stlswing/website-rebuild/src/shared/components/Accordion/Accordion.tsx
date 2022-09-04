@@ -1,5 +1,4 @@
 import React from 'react'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { animated, useSpring } from '@react-spring/web'
@@ -40,7 +39,7 @@ export const Accordion = ({ children, title, ...props }: AccordionProps) => {
           <span className='h-7 flex items-center ml-6'>
             <div>
               <FontAwesomeIcon
-                icon={faChevronDown}
+                icon={'chevron-down'}
                 className={`${svgClasses}  transform transition-all duration-300`}
               />
             </div>

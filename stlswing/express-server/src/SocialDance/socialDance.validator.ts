@@ -1,6 +1,5 @@
 import { z } from 'zod'
 
-export type SocialDancePayload = z.infer<typeof validateSocialDance>
 export const validateSocialDance = z.object({
   name: z.string(),
   description: z.string(),
@@ -10,3 +9,13 @@ export const validateSocialDance = z.object({
   location: z.string(),
   stripeProductId: z.number()
 })
+
+export interface SocialDancePayload
+  extends z.infer<typeof validateSocialDance> {
+  name: string
+  description: string
+  start: Date
+  end: Date
+  location: string
+  stripeProductId: number
+}

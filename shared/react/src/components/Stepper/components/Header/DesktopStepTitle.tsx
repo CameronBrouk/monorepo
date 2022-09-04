@@ -44,7 +44,7 @@ export const DesktopStepTitle = (props: StepTitleProps) => {
             <span
               className={`${indexContainerClasses} border-none bg-indigo-600 group-hover:bg-indigo-800`}
             >
-              <FontAwesomeIcon icon={faCheck} className='w-6 h-6 text-white' />
+              <FontAwesomeIcon icon={'check'} className='w-6 h-6 text-white' />
             </span>
           )}
 
@@ -54,7 +54,7 @@ export const DesktopStepTitle = (props: StepTitleProps) => {
               className={`${indexContainerClasses} border-2 border-red-600`}
             >
               <FontAwesomeIcon
-                icon={faExclamationTriangle}
+                icon={'exclamation-triangle'}
                 className='w-5 h-5 text-red-600'
               />
             </span>

@@ -1,6 +1,0 @@
-{
-  "extends": "./node_modules/@unimpaired/toolchain/includes/tsconfig-web.json",
-  "compilerOptions": {
-    "types": []
-  }
-}

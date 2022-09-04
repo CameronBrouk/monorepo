@@ -2,13 +2,25 @@
   "name": "@unimpaired/interfaces",
   "version": "1.0.2",
   "description": "",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "scripts": {
-    "start": "tsc --watch",
-    "serve": "pm2 --name interfaces start npm -- start",
-    "stop": "pm2 stop Utils",
     "build": "tsc",
+    "start": "tsc --watch",
+    "serve": "pm2 --name shared:interfaces start npm -- start",
     "serve:stlswing:backend": "npm run serve"
   },
   "author": "",
@@ -23,6 +35,7 @@
     "eslint-config-prettier": "~8.4.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "~4.0.0",
-    "eslint-plugin-unused-imports": "~2.0.0"
+    "eslint-plugin-unused-imports": "~2.0.0",
+    "typescript": "~4.8.2"
   }
 }

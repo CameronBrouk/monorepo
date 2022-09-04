@@ -92,14 +92,14 @@ export const Option = ({ value, label, ...props }: OptionProps) => {
           {props.selected ? (
             <FontAwesomeIcon
               className={`${'text-indigo-600'} h-4 w-4 group-hover:text-white group-focus:text-indigo-600 mr-2`}
-              icon={props.role === 'checkbox' ? faCheckSquare : faDotCircle}
+              icon={props.role === 'checkbox' ? 'check-square' : 'dot-circle'}
             />
           ) : (
             <FontAwesomeIcon
               className={`text-white border border-indigo-600 ${
                 props.role === 'checkbox' ? '' : 'rounded-full'
               } h-4 w-4 mr-2 `}
-              icon={props.role === 'checkbox' ? faSquare : faCircle}
+              icon={props.role === 'checkbox' ? 'square' : 'circle'}
             />
           )}
 
@@ -111,7 +111,7 @@ export const Option = ({ value, label, ...props }: OptionProps) => {
           <FontAwesomeIcon
             size='sm'
             className={`text-red-500 rounded-full group-hover:text-white group-hover:bg-red-500 group-focus:text-white group-focus:bg-red-500`}
-            icon={faTimesCircle}
+            icon={'times-circle'}
           />
         )}
       </div>

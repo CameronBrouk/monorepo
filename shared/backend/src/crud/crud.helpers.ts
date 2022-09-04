@@ -88,7 +88,8 @@ export const isValidParamId = z.object({ id: z.string() })
 
 export const validateRequestQuery = (req: Request, res: Response) => {
   const queryValidation = isValidQuery.safeParse(req.query)
-  if (!queryValidation.success) res.status(400).json(queryValidation.error)
+  if (!queryValidation.success && 'error' in queryValidation)
+    res.status(400).json(queryValidation.error)
   return queryValidation.success
 }
 
@@ -121,7 +122,7 @@ export const validateReqestBody = (
 ) => {
   // If a zod object is not given,
   const validated = zod.strict().safeParse(req.body)
-  if (!validated.success) {
+  if (!validated.success && 'error' in validated) {
     res.status(400).json(validated.error.issues)
     return false
   }
@@ -152,7 +153,7 @@ export const getPageOffset = (page?: number, pageSize?: number) => {
 export const getPrismaQueryParamFilters = (
   query: z.infer<typeof isValidQuery>
 ) => {
-  if (!query) return
+  if (!query) return null
   const take = !query.take ? {} : { take: Number(query.take) }
   const skip = !query.skip ? {} : { skip: Number(query.skip) }
   const orderBy =
@@ -205,7 +206,7 @@ type QueryFunc = <T extends Dict>(
 ) => Promise<{ count: number; page: number; data: any }>
 type GetFunc = <T extends Dict>(
   id: number
-) => Promise<{ count: number; page; data: T }>
+) => Promise<{ count: number; page: number; data: T }>
 type CreateOneFunc = <T extends Dict, V extends Dict>(body: T) => Promise<V>
 type CreateManyFunc = <T extends Dict, V extends Dict>(body: T) => Promise<V>
 type DeleteFunc = (id: number) => Promise<boolean>

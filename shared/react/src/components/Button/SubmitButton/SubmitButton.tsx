@@ -27,7 +27,7 @@ export const SubmitButton = ({
   useSubscription(clicks$, props.onClick)
 
   return (
-    <button variant='raised' type='submit' {...props} onSubmit={handleClick}>
+    <button type='submit' {...props} onSubmit={handleClick}>
       <div className='flex items-center space-x-2'>
         {(isSubmitting || loading) && <Loading className='w-6 h-6' />}
         <span>{children}</span>

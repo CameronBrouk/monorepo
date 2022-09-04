@@ -1,4 +1,5 @@
-import { add, camelCaseKeys, snakeCaseKeys } from './index'
+import { describe, test, expect } from 'vitest'
+import { add, camelCaseKeys, snakeCaseKeys } from './index.js'
 
 describe('add', () => {
   test('add 2', () => {

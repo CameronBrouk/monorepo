@@ -1,6 +1,3 @@
 {
-  "extends": "./node_modules/@unimpaired/toolchain/includes/tsconfig-web.json",
-  "compilerOptions": {
-    "types": []
-  }
+  "extends": "./node_modules/@unimpaired/toolchain/includes/node-pure-esmodules.json"
 }

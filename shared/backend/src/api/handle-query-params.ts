@@ -29,10 +29,10 @@ const getSkip = (params: QueryParams) => {
   return params.skip
 }
 
-export const getPrismaQueryParamFilters = (query: QueryParams) => {
-  if (!query) return
+export const getPrismaQueryParamFilters = (query?: QueryParams) => {
+  if (!query) return {}
   const zodValidated = zodValidateQuery.safeParse(query)
-  if (!zodValidated.success) return
+  if (!zodValidated.success) return {}
   const validatedQuery = zodValidated.data
 
   const skip = getSkip(validatedQuery)
@@ -59,7 +59,7 @@ export const getPrismaQueryParamFilters = (query: QueryParams) => {
         }
 
   const cursor =
-    !query.cursor || !query.sortProp
+    !query.cursor && !query.sortProp
       ? {}
       : {
           cursor: {

@@ -2,10 +2,8 @@ import React from 'react'
 import { inc, dec, range, uniq } from 'ramda'
 import { usePagination } from '../hooks/usePagination'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faChevronLeft,
-  faChevronRight
-} from '@fortawesome/free-solid-svg-icons'
+
+
 
 type Props = {
   usePagination: ReturnType<typeof usePagination>
@@ -68,7 +66,7 @@ export const Pagination = ({ items, perPage = 10, usePagination }: Props) => {
               className='rounded-l-md hover:bg-gray-50 relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300'
             >
               <span className='sr-only'>Previous</span>
-              <FontAwesomeIcon icon={faChevronLeft} />
+              <FontAwesomeIcon icon={'chevron-left'} />
             </button>
             {getPaginatedItems(getTotalPages(items)).map((number) => (
               <>
@@ -99,7 +97,7 @@ export const Pagination = ({ items, perPage = 10, usePagination }: Props) => {
               className='rounded-r-md hover:bg-gray-50 relative inline-flex items-center px-2 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300'
             >
               <span className='sr-only'>Next</span>
-              <FontAwesomeIcon icon={faChevronRight} />
+              <FontAwesomeIcon icon={'chevron-right'} />
             </button>
           </nav>
         </div>

@@ -188,7 +188,7 @@ export const makeCrudEndpoints = <
       })
       .safeParse(req.body)
 
-    if (!validation.success) {
+    if (!validation.success && 'error' in validation) {
       res.status(500).json(validation.error.issues)
       return
     }
@@ -209,7 +209,7 @@ export const makeCrudEndpoints = <
       .object({ ids: z.array(z.number()).min(1) })
       .safeParse(req.body)
 
-    if (!validation.success) {
+    if (!validation.success && 'error' in validation) {
       res.status(500).send(validation.error.issues)
       return
     }

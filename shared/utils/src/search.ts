@@ -3,7 +3,10 @@
  * @param array an array of random attributes.  can be object/string/number/etc
  * @param searchTerm a string or substring
  */
-export const fuzzySearch = <T>(array: T[], searchTerm: string): T[] =>
+export const fuzzySearch = <T extends Record<string, any>>(
+  array: T[],
+  searchTerm: string
+): T[] =>
   array.reduce<T[]>((searchedElements, element) => {
     if (typeof element === 'object' && searchObject(element, searchTerm))
       return [...searchedElements, element]
@@ -30,7 +33,7 @@ export const fuzzySearch = <T>(array: T[], searchTerm: string): T[] =>
  * @param object any type of object
  * @param searchTerm whatever substring you are wanting to search
  */
-export const searchObject = <T extends Record<any, any>>(
+export const searchObject = <T extends Record<string, any>>(
   object: T,
   searchTerm: string
 ): boolean =>

@@ -11,9 +11,8 @@ export const logExpressRoutes = (app: Express) => {
             d?.route?.path
           }`
       )
-      .filter((item) => !item.includes('undefined'))
+      .filter((item: any) => !item.includes('undefined'))
   )
-  // )
 }
 
 export const logObj = (name: string, object?: any) => {

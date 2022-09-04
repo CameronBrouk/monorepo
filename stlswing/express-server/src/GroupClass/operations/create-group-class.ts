@@ -31,3 +31,10 @@ export const createGroupClass = async (payload: GroupClassPayload) => {
     }
   })
 }
+
+// export interface GroupClassResponse extends GroupClassPayload {
+//   start: Date,
+//   end: Date,
+//   dates: Date[],
+//   requiredMoves: DanceMove[],
+// }

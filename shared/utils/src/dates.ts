@@ -26,6 +26,13 @@ import {
 import { pipe, any, map, subtract, range } from 'ramda'
 
 type monthsType = 'full' | 'condensed' | 'single'
+
+export const ISO_FORMAT = 'YYYY-MM-DDTHH:mm:ss.sssZ'
+export const fullIsoDateRegex =
+  /^[0-9]{4}-[10][0-9]-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$/
+
+export const isFullIsoDate = (date: string) => date.match(fullIsoDateRegex)
+
 export const getMonthsOfYear = (type: monthsType) =>
   range(0, 12)
     .map((number) => new Date(2020, number, 1))
@@ -160,7 +167,7 @@ export const anyPreviousHour = pipe(map(subHours(1)), anyThisHour)
 export const getClosestDate = (dates: (Date | number)[]) => pipe(
   map(getTime),
   map(subtract(getTime(new Date())))
-)
+)(dates)
 
 // prettier-ignore
 type dateFormats = 'month' | 'abbreviated-month' | 'day' | 'readable' | 'abbreviated-day' | 'day-first-letter' | 'day-of-year' | 'day-of-month' | 'week-of-year' | 'readable-date-and-time' | 'time' | 'form' | 'seconds' | 'condensed-readable'

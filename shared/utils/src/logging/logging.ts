@@ -3,13 +3,15 @@ import { format } from 'date-fns/fp'
 const LINE_SPACER = '------------------------------------------------------ \n'
 type logTypes = 'info' | 'warn' | 'error'
 
-type Options = {
-  severity?: 1 | 2 | 3
-  object?: Record<any, any>
-  code?: number
-}
+// type Options = {
+//   severity?: 1 | 2 | 3
+//   object?: Record<any, any>
+//   code?: number
+// }
 
-export const log = (message: string, type: logTypes, options?: Options) => {
+export const logSpacer = () => console.log(LINE_SPACER)
+
+export const log = (message: string, type: logTypes) => {
   // const bgTextLog = getBgColorFn(type)
   // const textLog = getTextColorFn(type)
   const timeStamp = getTimestamp(type)
@@ -19,10 +21,10 @@ export const log = (message: string, type: logTypes, options?: Options) => {
   // getSpacer(textLog, options)
 }
 
-const printObject = (options?: Options) => {
-  if (!options?.object) return
-  console.table(options.object)
-}
+// const printObject = (options?: Options) => {
+//   if (!options?.object) return
+//   console.table(options.object)
+// }
 
 // const getSpacer = (chalk: ChalkInstance, options?: Options) => {
 //   if (!options?.severity) return

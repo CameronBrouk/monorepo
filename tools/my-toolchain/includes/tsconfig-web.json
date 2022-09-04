@@ -10,7 +10,6 @@
     "sourceMap": true,
     "inlineSources": true,
     "experimentalDecorators": true,
-    "strictNullChecks": true,
     "types": [],
     "module": "esnext",
     "moduleResolution": "node",

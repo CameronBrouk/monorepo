@@ -286,7 +286,7 @@ export function Table<T extends Record<string, any>>(props: TableProps<T>) {
                           }`}
                         >
                           <FontAwesomeIcon
-                            icon={faChevronRight}
+                            icon={'chevron-right'}
                             className={`transform transition-all duration-300 text-gray-600 ${
                               isExpanded(record) ? 'rotate-90' : 'rotate-0'
                             }`}

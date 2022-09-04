@@ -1,4 +1,3 @@
-import { faWarning } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 
@@ -12,7 +11,7 @@ export const NoItemsCreated = (props: NoItemsCreatedProps) => (
     <div className='bg-white border-2 border-radius p-5 d-block w-full flex items-center justify-center max-w-lg m-4'>
       <div className='text-center space-y-4 flex flex-col items-center justify-center'>
         <FontAwesomeIcon
-          icon={faWarning}
+          icon={'warning'}
           className='h-20 text-blue-800 w-20 p-2 mb-4 object-cover mx-auto'
         />
         <h3 className='font-medium text-gray-800 text-2xl pb-4'>
