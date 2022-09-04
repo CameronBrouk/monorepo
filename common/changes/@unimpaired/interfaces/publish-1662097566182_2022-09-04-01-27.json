@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@unimpaired/interfaces",
+      "comment": "Publish to npm",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@unimpaired/interfaces",
+  "email": "cameronbrouk@gmail.com"
+}

@@ -52,9 +52,10 @@
       "shouldPublish": true
     },
     {
-      "packageName": "my-toolchain",
+      "packageName": "@unimpaired/toolchain",
       "projectFolder": "tools/my-toolchain",
-      "reviewCategory": "tools"
+      "reviewCategory": "tools",
+      "shouldPublish": true
     },
     {
       "packageName": "@stlswing/express-server",

@@ -17,7 +17,7 @@
    * If the main project should include other unrelated Rush projects, add it to the "projectSettings" section,
    * and then specify those projects in the "additionalProjectsToInclude" list.
    */
-  "deploymentProjectNames": ["my-app"],
+  "deploymentProjectNames": ["@stlswing/express-server"],
 
   /**
    * When deploying a local Rush project, the package.json "devDependencies" are normally excluded.
@@ -25,7 +25,7 @@
    *
    * The default value is false.
    */
-  // "includeDevDependencies": true,
+  "includeDevDependencies": true,
 
   /**
    * When deploying a local Rush project, normally the .npmignore filter is applied so that Rush only copies
@@ -50,19 +50,19 @@
    * Customize how Rush projects are processed during deployment.
    */
   "projectSettings": [
-    // {
-    //   /**
-    //    * The full package name of the project, which must be declared in rush.json.
-    //    */
-    //   "projectName": "@my-scope/my-project",
-    //
-    //   /**
-    //    * A list of additional local Rush projects to be deployed with this project (beyond the package.json
-    //    * dependencies).  Specify full package names, which must be declared in rush.json.
-    //    */
-    //   "additionalProjectsToInclude": [
-    //     // "@my-scope/my-project2"
-    //   ]
-    // }
+    {
+      /**
+       * The full package name of the project, which must be declared in rush.json.
+       */
+      "projectName": "@stlswing/express-server",
+
+      /**
+       * A list of additional local Rush projects to be deployed with this project (beyond the package.json
+       * dependencies).  Specify full package names, which must be declared in rush.json.
+       */
+      "additionalProjectsToInclude": [
+        // "@my-scope/my-project2"
+      ]
+    }
   ]
 }

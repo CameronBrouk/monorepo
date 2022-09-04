@@ -187,6 +187,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@unimpaired/toolchain",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@unimpaired/utils",
       "allowedCategories": [ "production" ]
     },
@@ -208,6 +212,10 @@
     },
     {
       "name": "body-parser",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "c8",
       "allowedCategories": [ "production" ]
     },
     {

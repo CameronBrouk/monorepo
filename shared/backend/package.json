@@ -7,6 +7,7 @@
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "private": false,
   "files": [
     "lib",
     "package.json"
@@ -46,7 +47,7 @@
     "babel-jest": "~27.5.1",
     "babel-loader": "^8.2.3",
     "jest-watch-typeahead": "~1.1.0",
-    "my-toolchain": "^1.0.0",
+    "@unimpaired/toolchain": "^1.0.0",
     "ts-node": "~10.8.1",
     "nodemon": "~2.0.16",
     "prisma": "~4.3.0",

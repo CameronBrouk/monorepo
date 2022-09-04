@@ -11,7 +11,9 @@ import socialDanceApi from './SocialDance/social-dance.api.js'
 import { validateSocialDance } from './SocialDance/socialDance.validator.js'
 import { environment } from './environment.js'
 
-export const prisma = new PrismaClient()
+export const prisma = new PrismaClient({
+  log: ['error', 'info', 'query', 'warn']
+})
 export const app: Express = express()
 
 console.log(environment)

@@ -1,4 +1,5 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it, test } from 'vitest'
+import { range, times } from 'ramda'
 import { GroupClassPayload } from './groupClass.validators.js'
 import { createSingle, updateSingle, getSingle } from '../test-utils.js'
 
@@ -15,7 +16,33 @@ const requestBody: GroupClassPayload = {
   stripeProductId: 1
 }
 
-describe('Group Class', () => {
+const items = range(0, 20000)
+
+describe('Stress Test', () => {
+  items.forEach(() => {
+    it.concurrent('Request :)', async () => {
+      const createResponse = await createSingle('group-class', requestBody)
+      expect(createResponse.status).toBe(200)
+      expect(createResponse.body.name).toBe('Starting Swing')
+
+      // Update Works
+      const updateResponse = await updateSingle(
+        'group-class',
+        { name: 'Continuing Swing' },
+        createResponse.body.id
+      )
+      expect(updateResponse.status).toBe(200)
+      expect(updateResponse.body.name).toBe('Continuing Swing')
+
+      // Get Works
+      const getResponse = await getSingle('group-class', updateResponse.body.id)
+      expect(getResponse.status).toBe(200)
+      expect(getResponse.body.name).toBe('Continuing Swing')
+    })
+  })
+})
+
+describe.skip('Group Class', () => {
   test('GET, Create, Update, and Delete a Group Class', async () => {
     // Create Works
     const createResponse = await createSingle('group-class', requestBody)

@@ -4,7 +4,7 @@ This template is part of the documentation of the [Rush](https://rushjs.io/) too
 
 - **apps/my-app**: The web application
 - **libraries/my-controls**: A control library used by the application
-- **tools/my-toolchain**: A NodeJS build tool used to compile the other projects
+- **tools/@unimpaired/toolchain**: A NodeJS build tool used to compile the other projects
 
 (These projects are NOT meant to provide a realistic toolchain.)
 
