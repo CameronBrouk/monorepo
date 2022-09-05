@@ -2,6 +2,23 @@
   "name": "@unimpaired/utils",
   "entries": [
     {
+      "version": "1.0.4",
+      "tag": "@unimpaired/utils_v1.0.4",
+      "date": "Mon, 05 Sep 2022 14:18:31 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@unimpaired/toolchain\" from `^1.0.2` to `^1.0.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.3",
       "tag": "@unimpaired/utils_v1.0.3",
       "date": "Mon, 05 Sep 2022 00:19:11 GMT",

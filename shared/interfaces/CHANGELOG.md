@@ -1,6 +1,13 @@
 # Change Log - @unimpaired/interfaces
 
-This log was last generated on Sun, 04 Sep 2022 01:37:56 GMT and should not be manually modified.
+This log was last generated on Mon, 05 Sep 2022 14:18:31 GMT and should not be manually modified.
+
+## 1.0.3
+Mon, 05 Sep 2022 14:18:31 GMT
+
+### Patches
+
+- Update
 
 ## 1.0.2
 Sun, 04 Sep 2022 01:37:56 GMT

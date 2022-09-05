@@ -1,6 +1,6 @@
 {
   "name": "@unimpaired/backend",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This package includes utility functions for express backends",
   "author": "Cameron Brouk",
   "license": "ISC",
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@prisma/client": "~4.3.0",
-    "@unimpaired/interfaces": "~1.0.2",
-    "@unimpaired/utils": "~1.0.3",
+    "@unimpaired/interfaces": "~1.0.3",
+    "@unimpaired/utils": "~1.0.4",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.9.0",
@@ -42,7 +42,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "~4.0.0",
     "eslint-plugin-unused-imports": "~2.0.0",
-    "@unimpaired/toolchain": "^1.0.2",
+    "@unimpaired/toolchain": "^1.0.3",
     "ts-node": "~10.8.1",
     "nodemon": "~2.0.16",
     "prisma": "~4.3.0",
