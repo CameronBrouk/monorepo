@@ -6,7 +6,8 @@
   "license": "ISC",
   "type": "module",
   "exports": {
-    "./*": "./dist/*.js"
+    ".": "./dist/index.js",
+    "./*": "./dist/*"
   },
   "typesVersions": {
     "*": {
@@ -16,10 +17,6 @@
     }
   },
   "private": false,
-  "files": [
-    "dist",
-    "package.json"
-  ],
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
