@@ -263,12 +263,20 @@
       "allowedCategories": [ "production", "tools" ]
     },
     {
+      "name": "eslint-import-resolver-typescript",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "eslint-plugin-fp",
+      "allowedCategories": [ "tools" ]
+    },
+    {
       "name": "eslint-plugin-import",
       "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-plugin-jsx-a11y",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-plugin-prettier",
@@ -276,11 +284,15 @@
     },
     {
       "name": "eslint-plugin-react",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "eslint-plugin-react-hooks",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
+    },
+    {
+      "name": "eslint-plugin-simple-import-sort",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "eslint-plugin-storybook",
@@ -424,7 +436,7 @@
     },
     {
       "name": "prettier",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tools" ]
     },
     {
       "name": "prettier-eslint",

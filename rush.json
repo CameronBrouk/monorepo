@@ -58,14 +58,15 @@
       "shouldPublish": true
     },
     {
+      "packageName": "@unimpaired/eslint-node",
+      "projectFolder": "tools/eslint-node",
+      "reviewCategory": "tools",
+      "shouldPublish": true
+    },
+    {
       "packageName": "@stlswing/express-server",
       "projectFolder": "stlswing/express-server",
       "reviewCategory": "production"
     }
-    // {
-    //   "packageName": "@stlswing/website-rebuild",
-    //   "projectFolder": "stlswing/website-rebuild",
-    //   "reviewCategory": "production"
-    // },
   ]
 }
