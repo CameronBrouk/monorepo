@@ -16,7 +16,6 @@
     }
   },
   "scripts": {
-    "esbuild": "esbuild src/index.ts --platform=node --bundle --minify --outfile=lib/index.js",
     "build": "prisma generate && tsc",
     "build:watch": "prisma generate && tsc --watch",
     "start": "nodemon dist/index.js",
@@ -77,8 +76,7 @@
     "swagger-jsdoc": "~6.2.5",
     "@types/swagger-jsdoc": "~6.0.1",
     "@types/swagger-ui-express": "~4.1.3",
-    "c8": "~7.12.0",
-    "esbuild": "~0.15.7"
+    "c8": "~7.12.0"
   },
   "peerDependencies": {
     "node-notifier": "~10.0.1",
