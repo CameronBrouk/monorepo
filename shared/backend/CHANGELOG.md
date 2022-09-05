@@ -1,6 +1,13 @@
 # Change Log - @unimpaired/backend
 
-This log was last generated on Sun, 04 Sep 2022 01:37:56 GMT and should not be manually modified.
+This log was last generated on Mon, 05 Sep 2022 00:15:57 GMT and should not be manually modified.
+
+## 1.0.3
+Mon, 05 Sep 2022 00:15:57 GMT
+
+### Patches
+
+- Update to esmodule
 
 ## 1.0.2
 Sun, 04 Sep 2022 01:37:56 GMT
