@@ -1,4 +1,4 @@
-import { SocialDance } from '@stlswing/database'
+import { SocialDance } from '@prisma/client'
 import { getPrismaQueryParamFilters, QueryParams } from '@unimpaired/backend'
 import { WhereFilters } from '@unimpaired/interfaces'
 import { prisma } from '../../index.js'

@@ -1,4 +1,4 @@
-import { GroupClass } from '@stlswing/database'
+import { GroupClass } from '@prisma/client'
 import { getPrismaQueryParamFilters, QueryParams } from '@unimpaired/backend'
 import { prisma } from '../../index.js'
 import { prop, propEq } from 'ramda'

@@ -1,4 +1,4 @@
-import { PrismaClient } from '@stlswing/database'
+import { PrismaClient } from '@prisma/client'
 import {
   generateApi,
   logExpressRoutes,
@@ -16,7 +16,6 @@ export const prisma = new PrismaClient({
 })
 export const app: Express = express()
 
-console.log(environment)
 app.use(express.json())
 
 app.listen(environment.PORT, () => {
