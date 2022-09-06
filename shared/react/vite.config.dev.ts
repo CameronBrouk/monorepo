@@ -23,7 +23,7 @@ export default defineConfig({
     lib: {
       entry: 'src/index.ts',
       name: 'index',
-      formats: ['es', 'umd'],
+      formats: ['es'],
       fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {
