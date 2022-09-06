@@ -175,6 +175,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@unimpaired/eslint-config-node",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@unimpaired/interfaces",
       "allowedCategories": [ "production" ]
     },
@@ -244,6 +248,10 @@
     },
     {
       "name": "date-fns",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "date-fns-tz",
       "allowedCategories": [ "production" ]
     },
     {
@@ -425,6 +433,10 @@
     {
       "name": "openapi-types",
       "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "pnpm",
+      "allowedCategories": [ "tools" ]
     },
     {
       "name": "postcss",
