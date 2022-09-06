@@ -1,14 +1,13 @@
 {
-  "extends": "./node_modules/@unimpaired/toolchain/includes/tsconfig-web.json",
+  "extends": "./node_modules/@unimpaired/toolchain/includes/node-pure-esmodules.json",
   "compilerOptions": {
     "types": ["vite/client", "vitest", "react"],
-    "outDir": "./types",
-    "isolatedModules": true,
-    "useDefineForClassFields": true,
-    "allowSyntheticDefaultImports": true,
-    "allowUmdGlobalAccess": true,
-    "emitDeclarationOnly": true,
-    "target": "es5",
-    "jsx": "react"
+    // "isolatedModules": true,
+    // "useDefineForClassFields": true,
+    // "allowSyntheticDefaultImports": true,
+    // "allowUmdGlobalAccess": true,
+    // "emitDeclarationOnly": true,
+    // "outDir": "./types",
+    "jsx": "react-jsx"
   }
 }

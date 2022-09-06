@@ -7,6 +7,7 @@ import { SelectLabel } from './components/SelectLabel'
 import { SelectOptionButton } from './components/SelectOptionButton'
 import { SelectOptions } from './components/SelectOptions'
 import { getChildrenProps } from './select.helpers'
+import { Option } from './components/Option/Option'
 
 export interface SelectProps<T extends unknown = string> {
   name: string
@@ -146,3 +147,5 @@ export function Select<T extends any = string>(props: SelectProps<T>) {
     </div>
   )
 }
+
+Select.Option = Option
