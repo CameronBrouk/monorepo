@@ -1,4 +1,10 @@
-# Example Rush Monorepo
+# Unimpaired MonoRepo
+
+This is the base monorepo used for any and all of my node projects, both frontend and backend
+
+## Capabilities
+
+<!-- # Example Rush Monorepo
 
 This template is part of the documentation of the [Rush](https://rushjs.io/) tool. It contains documented templates for all the standard Rush configuration files. It also includes three barebones projects that illustrate some dependency relationships in a Rush repo:
 
@@ -256,4 +262,4 @@ To truly understand a mono repo, you need to understand how a single application
 
 ### vite
 
-$(git diff --name-only . | grep src | sed 's/.\*\(src\)/\1/')
+$(git diff --name-only . | grep src | sed 's/.\*\(src\)/\1/') -->
