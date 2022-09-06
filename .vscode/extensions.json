@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss", // Autocompletion for tailwind Classes
+    "austenc.tailwind-docs", // Search tailwind doc -> opens link to doc page
+    "esbenp.prettier-vscode", // Run prettier on save
+    "dotenv.dotenv-vscode", // Formatting, Highlighting, autocomplete, peeking for process.env
+    "sleistner.vscode-fileutils", // Adds commands for create/rename/delete files
+    "Prisma.prisma", // Add syntax highlighting for .prisma files
+    "donjayamanne.githistory", // View git log, file history, compare branches or commits
+    "naumovs.color-highlight", // highlight web colors
+    "DavidAnson.vscode-markdownlint", // Linting for markdown files
+    "shd101wyy.markdown-preview-enhanced", // Open preview of markdown file in sidepanel
+    "ms-azuretools.vscode-docker", // Docker extension for vscode
+    "ms-vsliveshare.vsliveshare", // vscode liveshare for pair programming
+    "ZixuanChen.vitest-explorer", // Run and debug vitest unit tests
+    "bierner.github-markdown-preview",
+    "bierner.markdown-checkbox",
+    "bierner.markdown-emoji",
+    "bierner.markdown-footnotes",
+    "bierner.markdown-mermaid",
+    "bierner.markdown-preview-github-styles",
+    "bierner.markdown-yaml-preamble",
+    "cschleiden.vscode-github-actions",
+    "vscodevim.vim"
+  ]
+}

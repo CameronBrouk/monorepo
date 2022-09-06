@@ -1,0 +1,130 @@
+// prettier-ignore
+{
+  // workbench
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.settings.editor": "json",
+  "workbench.statusBar.visible": true,
+  "workbench.commandPalette.preserveInput": true,
+  "workbench.editor.closeOnFileDelete": true,
+  "remote.extensionKind": {
+    "vscodevim.vim": ["workspace"]
+  },
+  // Prettier
+  // "prettier.singleQuote": true,
+  // "prettier.printWidth": 80,
+  // "prettier.bracketSameLine": true,
+  // "prettier.trailingComma": "all",
+  // "prettier.useTabs": false,
+  // "prettier.tabWidth": 2,
+  // "prettier.jsxSingleQuote": true,
+  // "prettier.semi": false,
+  // "prettier.htmlWhitespaceSensitivity": "ignore",
+  // "prettier.endOfLine": "lf",
+  // "prettier.bracketSpacing": true,
+  // "prettier.quoteProps": "as-needed",
+
+  "explorer.confirmDelete": false,
+  "search.showLineNumbers": true,
+  // Files
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  // html
+  "html.format.wrapAttributes": "force-aligned",
+  "html.format.extraLiners": "head, body, /html, main, div",
+  // git
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
+  // 	// Vim
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  "vim.gdefault": true,
+  "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 400,
+  "vim.hlsearch": true,
+  "vim.leader": "<Space>",
+  "vim.replaceWithRegister": true,
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  // Keybindings
+  "typescript.format.semicolons": "remove",
+  "javascript.format.semicolons": "remove",
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "editor.minimap.enabled": false,
+  "markdown-preview-enhanced.breakOnSingleNewLine": true,
+  "diffEditor.renderSideBySide": true,
+  "workbench.activityBar.visible": true,
+  "workbench.sideBar.location": "left",
+  "git.enableSmartCommit": true,
+  "editor.suggestSelection": "first",
+  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "prettier.proseWrap": "never",
+  "[markdown]": {
+    "editor.autoIndent": "advanced",
+    "editor.wordWrap": "off",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "emmet.showAbbreviationSuggestions": false,
+  "emmet.showExpandedAbbreviation": "never",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.exclude": {
+    // "node_modules": true
+    "**/tsconfig.tsbuildinfo": true,
+    ".eslintcache": true,
+    "debug.log": true,
+    "**/*.build.*": true,
+    "**/*tmp*": true,
+  },
+  "search.quickOpen.includeHistory": false,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "[\"javascript\", \"javascriptreact\"]"
+  ],
+  // tailwind css
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "gitlab.pipelineGitRemoteName": "",
+  "editor.foldingImportsByDefault": true,
+  "vim.enableNeovim": true,
+  "editor.formatOnSave": true,
+  "typescript.tsserver.maxTsServerMemory": 8000,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "breadcrumbs.enabled": false,
+  "window.zoomLevel": 1,
+"files.associations": {
+  "*.json": "jsonc"
+},
+"markdownlint.config": {
+  "blockquote": true,
+  "code": true,
+  "blank_lines": false,
+  "blanks-around-headers": false,
+  "blanks-around-headings": false,
+  "blanks-around-lists": false,
+  "blanks-around-fences": false
+}
+}
