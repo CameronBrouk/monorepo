@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-  "rushVersion": "5.47.0",
-  "pnpmVersion": "6.3.0",
+  "rushVersion": "5.77.3",
+  "pnpmVersion": "7.9.5",
   "ensureConsistentVersions": true,
   "pnpmOptions": {
     "strictPeerDependencies": true
   },
-  "nodeSupportedVersionRange": ">=14.15.0 <17.0.0",
+  "nodeSupportedVersionRange": ">=14.15.0 <19.0.0",
   "approvedPackagesPolicy": {
     "reviewCategories": ["production", "tools", "prototypes"]
   },
@@ -58,7 +58,7 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@unimpaired/eslint-node",
+      "packageName": "@unimpaired/eslint-config-node",
       "projectFolder": "tools/eslint-node",
       "reviewCategory": "tools",
       "shouldPublish": true
@@ -66,6 +66,11 @@
     {
       "packageName": "@stlswing/express-server",
       "projectFolder": "stlswing/express-server",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "@stlswing/website-rebuild",
+      "projectFolder": "stlswing/website-rebuild",
       "reviewCategory": "production"
     }
   ]
