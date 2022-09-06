@@ -5,17 +5,20 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
-  "typings": "types/index.d.ts",
+  "type": "module",
   "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+    ".": "./dist/index.js",
+    "./*": "./dist/*"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
     }
   },
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "tsc",
     "stories": "ladle serve",
     "types": "tsc --watch",
     "build:dev": "vite build --config ./vite.config.dev.ts",
@@ -25,7 +28,6 @@
     "serve:test": "pm2 --name components:test start npm -- run test",
     "serve": "npm run serve:build && npm run serve:stories && npm run serve:types",
     "stop": "pm2 delete components:build && pm2 delete components:stories && pm2 delete components:types",
-    "lint": "eslint src/**/*.ts* --fix",
     "preview": "vite preview",
     "test": "vitest --config ./vitest.config.ts",
     "test:vitest:coverage": "vitest --coverage",
@@ -51,7 +53,8 @@
     "react-intersection-observer": "~9.3.5",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
-    "@unimpaired/interfaces": "~1.0.3"
+    "@unimpaired/interfaces": "~1.0.3",
+    "vite-plugin-dts": "~1.4.1"
   },
   "devDependencies": {
     "@ladle/react": "~1.1.1",
@@ -63,20 +66,10 @@
     "@types/react": "~18.0.14",
     "@types/react-dom": "~18.0.5",
     "@types/testing-library__jest-dom": "~5.14.2",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
     "@vitejs/plugin-react": "~1.2.0",
     "autoprefixer": "~10.4.2",
     "cssnano": "~5.0.17",
-    "eslint": "^8.9.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "~8.4.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "~4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-unused-imports": "~2.0.0",
+    "eslint": "~8.23.0",
     "happy-dom": "~2.41.0",
     "jest-axe": "~6.0.0",
     "postcss": "~8.4.7",
@@ -87,9 +80,10 @@
     "vite": "^2.8.0",
     "vite-plugin-eslint": "~1.3.0",
     "vitest": "~0.5.7",
-    "@unimpaired/toolchain": "^1.0.3",
+    "@unimpaired/toolchain": "~1.0.3",
     "@types/ramda": "~0.28.14",
-    "@unimpaired/utils": "~1.0.4"
+    "@unimpaired/utils": "~1.0.4",
+    "@unimpaired/eslint-config-node": "~0.0.1"
   },
   "peerDependencies": {
     "node-notifier": "~10.0.1"
