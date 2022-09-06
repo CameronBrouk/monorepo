@@ -42,6 +42,7 @@ export function useFirestore<T extends CollectionNames>(collectionName: T) {
   useEffect(() => {
     if (!collectionMap) return
     const filteredList = pipe(
+      // @ts-ignore
       values,
       // @ts-ignore
       reject(propEq('deleted', true)),

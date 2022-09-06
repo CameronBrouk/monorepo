@@ -1,4 +1,4 @@
-import { Option, Select } from '../../../../../shared/components/Form'
+import { Select } from '@unimpaired/react'
 import { FULL_MONTHS_IN_YEAR } from '../../../../../shared/utils'
 
 export type ClassFilters = {
@@ -36,7 +36,7 @@ export const GroupClassFilters = ({
         defaultValues={[filters.month]}
       >
         {FULL_MONTHS_IN_YEAR.slice(new Date().getMonth() - 12).map((month) => (
-          <Option key={month} label={month} value={month} />
+          <Select.Option key={month} label={month} value={month} />
         ))}
       </Select>
 
@@ -49,7 +49,7 @@ export const GroupClassFilters = ({
         onSelect={(level) => setFilters((filters) => ({ ...filters, level }))}
       >
         {['1', '2', '3'].map((level) => (
-          <Option key={level} label={level} value={level} />
+          <Select.Option key={level} label={level} value={level} />
         ))}
         {/* {GROUP_CLASS_LEVELS.map((level) => (
           <Option label={level} value={level} />
@@ -66,7 +66,7 @@ export const GroupClassFilters = ({
         }
       >
         {['1', '2', '3'].map((type) => (
-          <Option key={type} label={type} value={type} />
+          <Select.Option key={type} label={type} value={type} />
         ))}
         {/* {DANCE_FORMS.map((month) => (
           <Option label={month} value={month} />

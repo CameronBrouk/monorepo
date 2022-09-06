@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Button, SubmitButton } from 'src/shared/components/Button'
-import { Input } from 'src/shared/components/Form'
+import { Button, SubmitButton, Input } from '@unimpaired/react'
 
 type Props = {
   afterRegister?: (user: any) => void

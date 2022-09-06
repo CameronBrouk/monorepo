@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 // import { firebaseApp } from 'src/firebaseConfig'
 // import { Button, SubmitButton } from 'src/shared/components/Button'
 // import GoalForm from './GoalForm'
-import { Input, Radio, Select, Textarea } from 'src/shared/components/Form'
+import { Input, Radio, Select, Textarea } from '@unimpaired/react'
 import { Goal } from '../models'
 
 interface GoalFormProps {

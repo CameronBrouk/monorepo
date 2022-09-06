@@ -35,12 +35,12 @@ export const updated = (user?: any) => ({
   updatedBy: user?.id
 })
 
-type FirestoreWhere<T extends Record<string, any>> = [
+type FirestoreWhere<T extends {}> = [
   keyof T extends FieldPath ? T : string,
   WhereFilterOp,
   any
 ]
-type Options<T> = {
+type Options<T extends {}> = {
   where?: FirestoreWhere<T>[]
   limit?: number
   orderBy?: keyof T extends string ? string : FieldPath

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { H1 } from '../../shared/components/Text/H1'
 import { Accordion } from '../../shared/components/Accordion'
 import { Search } from '../../shared/components/Search'
-import { fuzzySearch } from '../../shared/utils'
+import { fuzzySearch } from '@unimpaired/utils'
 import { faqContent } from './faq.constants'
 import { Breadcrumbs } from '../../shared/components/Layout/Breadcrumbs'
 
