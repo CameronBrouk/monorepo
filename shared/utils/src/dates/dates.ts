@@ -1,4 +1,5 @@
 import { isThisWeek, isThisMonth, isThisYear, isThisHour } from 'date-fns'
+import { zonedTimeToUtc, utcToZonedTime } from 'date-fns-tz'
 import {
   subWeeks,
   addWeeks,
@@ -24,10 +25,13 @@ import {
   getTime
 } from 'date-fns/fp'
 import { pipe, any, map, subtract, range } from 'ramda'
+import { Timezones } from './timezones'
 
 type monthsType = 'full' | 'condensed' | 'single'
 
 export const ISO_FORMAT = 'YYYY-MM-DDTHH:mm:ss.sssZ'
+// 2021-01-01T00:00:00.800Z
+
 export const fullIsoDateRegex =
   /^[0-9]{4}-[10][0-9]-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$/
 
@@ -53,8 +57,16 @@ export const getCurrentMonth = (type: monthsType) =>
   )
 
 // prettier-ignore
-export const dayAbbreviations = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ]
-export const mobileDayAbbreviations = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+export const dayAbbreviations = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ] as const
+export const mobileDayAbbreviations = [
+  'S',
+  'M',
+  'T',
+  'W',
+  'T',
+  'F',
+  'S'
+] as const
 
 export const FULL_MONTHS_IN_YEAR = getMonthsOfYear('full')
 
@@ -198,3 +210,26 @@ export const formatDate = (
     )
   return format('PPPP', new Date(date)).slice(0, -6)
 }
+
+export const removeOffset = (
+  date: Date | string | number,
+  timezone: Timezones
+) => {
+  return zonedTimeToUtc(date, 'UTC', {
+    timeZone: 'UTC'
+  })
+}
+
+export const addTimezoneInfo = (
+  date: Date | string | number,
+  timezone: Timezones
+) => {
+  return utcToZonedTime(date, timezone)
+}
+
+export const toUTC = (date: Date | string | number) =>
+  new Date(
+    utcToZonedTime(new Date(date), 'UTC')
+      .toISOString()
+      .replace(/\..*Z/, '.000Z')
+  )
