@@ -9,6 +9,7 @@ describe('Zod Date', () => {
     const checked = date.safeParse(new Date())
     expect(checked.success).toBe(true)
   })
+
   test('String Date Parse succeeds', () => {
     const date = zodUtils.zodDateTime('startDate')
     const checked = date.safeParse('2022-01-12T00:00:00.000Z')
@@ -42,8 +43,8 @@ describe('Zod prettify errors', () => {
     if (valid.success) return
     logSpacer()
     // @ts-ignore
-    if ('error' in valid) console.log(valid.error.issues)
-    if ('error' in valid) console.log(zodUtils.prettifyZodError(valid.error))
+    // if ('error' in valid) console.log(valid.error.issues)
+    // if ('error' in valid) console.log(zodUtils.prettifyZodError(valid.error))
     if ('issues' in valid)
       expect(zodUtils.prettifyZodError(valid)).toBeTypeOf('string')
   })

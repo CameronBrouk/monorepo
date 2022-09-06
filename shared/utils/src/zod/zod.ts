@@ -1,5 +1,5 @@
 import { z, ZodError, ZodIssue } from 'zod'
-import { fullIsoDateRegex, ISO_FORMAT } from '../dates.js'
+import { fullIsoDateRegex, ISO_FORMAT } from '../dates/dates.js'
 
 type zodType = 'date' | 'number' | 'string' | 'array' | 'boolean'
 export const getZodErrorMessages = (propName: string, type: zodType) => ({
